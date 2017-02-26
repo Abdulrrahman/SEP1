@@ -1,56 +1,141 @@
-angular.module('starter.controllers', [])
+angular.module('SimpleRESTIonic.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+    .controller('LoginCtrl', function (Backand, $state, $rootScope, LoginService) {
+        var login = this;
 
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+        function signin() {
+            LoginService.signin(login.email, login.password)
+                .then(function () {
+                    onLogin();
+                }, function (error) {
+                    console.log(error)
+                })
+        }
 
-  // Form data for the login modal
-  $scope.loginData = {};
+        function anonymousLogin(){
+            LoginService.anonymousLogin();
+            onLogin();
+        }
 
-  // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
+        function onLogin(){
+            $rootScope.$broadcast('authorized');
+            login.email = '';
+            login.password = '';            
+            $state.go('tab.dashboard');
+        }
 
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
-  };
+        function signout() {
+            LoginService.signout()
+                .then(function () {
+                    //$state.go('tab.login');
+                    login.email = '';
+                    login.password = '';
+                    $rootScope.$broadcast('logout');
+                    $state.go($state.current, {}, {reload: true});
+                })
 
-  // Open the login modal
-  $scope.login = function() {
-    $scope.modal.show();
-  };
+        }
 
-  // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
+        login.signin = signin;
+        login.signout = signout;
+        login.anonymousLogin = anonymousLogin;
+    })
 
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
-  };
-})
+    .controller('DashboardCtrl', function (ItemsModel, $rootScope) {
+        var vm = this;
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
+        function goToBackand() {
+            window.location = 'http://docs.backand.com';
+        }
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+        function getAll() {
+            ItemsModel.all()
+                .then(function (result) {
+                    vm.data = result.data.data;
+                });
+        }
+
+        function clearData(){
+            vm.data = null;
+        }
+
+        function create(object) {
+            ItemsModel.create(object)
+                .then(function (result) {
+                    cancelCreate();
+                    getAll();
+                });
+        }
+
+        function update(object) {
+            ItemsModel.update(object.id, object)
+                .then(function (result) {
+                    cancelEditing();
+                    getAll();
+                });
+        }
+
+        function deleteObject(id) {
+            ItemsModel.delete(id)
+                .then(function (result) {
+                    cancelEditing();
+                    getAll();
+                });
+        }
+
+        function initCreateForm() {
+            vm.newObject = {name: '', description: ''};
+        }
+
+        function setEdited(object) {
+            vm.edited = angular.copy(object);
+            vm.isEditing = true;
+        }
+
+        function isCurrent(id) {
+            return vm.edited !== null && vm.edited.id === id;
+        }
+
+        function cancelEditing() {
+            vm.edited = null;
+            vm.isEditing = false;
+        }
+
+        function cancelCreate() {
+            initCreateForm();
+            vm.isCreating = false;
+        }
+
+        vm.objects = [];
+        vm.edited = null;
+        vm.isEditing = false;
+        vm.isCreating = false;
+        vm.getAll = getAll;
+        vm.create = create;
+        vm.update = update;
+        vm.delete = deleteObject;
+        vm.setEdited = setEdited;
+        vm.isCurrent = isCurrent;
+        vm.cancelEditing = cancelEditing;
+        vm.cancelCreate = cancelCreate;
+        vm.goToBackand = goToBackand;
+        vm.isAuthorized = false;
+
+        $rootScope.$on('authorized', function () {
+            vm.isAuthorized = true;
+            getAll();
+        });
+
+        $rootScope.$on('logout', function () {
+            clearData();
+        });
+
+        if(!vm.isAuthorized){
+            $rootScope.$broadcast('logout');
+        }
+
+        initCreateForm();
+        getAll();
+
+    });
+
