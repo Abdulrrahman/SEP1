@@ -137,5 +137,11 @@ angular.module('SimpleRESTIonic.controllers', [])
         initCreateForm();
         getAll();
 
-    });
+    })
+    
+    
+    .controller('MainCtrl', function (ItemsModel, $rootScope) {
+    })
+    
+    ;
 

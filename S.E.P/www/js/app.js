@@ -50,6 +50,15 @@ angular.module('SimpleRESTIonic', ['ionic', 'backand', 'SimpleRESTIonic.controll
                         controller: 'LoginCtrl as login'
                     }
                 }
+            })
+            .state('tab.main', {
+                url: '/main',
+                views: {
+                    'tab-main': {
+                        templateUrl: 'templates/tab-main.html',
+                        controller: 'MainCtrl as vm'
+                    }
+                }
             });
 
         $urlRouterProvider.otherwise('/tabs/dashboard');
