@@ -56,7 +56,7 @@ angular.module('SimpleRESTIonic', ['ionic', 'backand', 'SimpleRESTIonic.controll
                 views: {
                     'tab-main': {
                         templateUrl: 'templates/tab-main.html',
-                        controller: 'MainCtrl as vm'
+                        controller: 'MainCtrl as Mv'
                     }
                 }
             });
