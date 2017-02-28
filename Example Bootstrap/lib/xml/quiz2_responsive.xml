@@ -105,7 +105,7 @@
 
     <!--responsive timer-->
     <!--2 column layout, timer on the right, moves to top center on phones-->
-    <box id="timerRow" position="absolute" x="0" y="0" anim="none" animtime="0.5" animdelay="1" class="col-md-10 col-md-offset-1">
+    <box id="timerRow" position="absolute" x="100" y="150" anim="none" animtime="0.5" animdelay="1" class="col-md-10 col-md-offset-1">
     	<box id="timerCol1" position="relative" class="col-md-6" />
     	<box id="timerContainer" position="relative" class="col-md-6" />
     </box>
