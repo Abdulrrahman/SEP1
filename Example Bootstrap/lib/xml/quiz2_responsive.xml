@@ -110,7 +110,7 @@
     	<box id="timerContainer" position="relative" class="col-md-6" />
     </box>
 
-    <!--opening text-->
+    <!--opening textq-->
     <box id="openingText" position="relative" anim="left" animtime="0.5" animdelay="1" class="col-md-10 col-md-offset-1 vertical-align" z-index="3">
 
     	<text id="title" position="relative" margin-top="20" anim="none"><![CDATA[<h1 class="black">Multiple Choice Quiz Engine</h1><p class="p_16_black">Welcome to this short quiz.</p><p class="p_16_black">For each question, select the answer before your time runs out!</p>]]></text>
