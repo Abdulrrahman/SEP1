@@ -110,7 +110,7 @@
     	<box id="timerContainer" position="relative" class="col-md-6" />
     </box>
 
-    <!--opening textq-->
+    <!--opening text-->
     <box id="openingText" position="relative" anim="left" animtime="0.5" animdelay="1" class="col-md-10 col-md-offset-1 vertical-align" z-index="3">
 
     	<text id="title" position="relative" margin-top="20" anim="none"><![CDATA[<h1 class="black">Multiple Choice Quiz Engine</h1><p class="p_16_black">Welcome to this short quiz.</p><p class="p_16_black">For each question, select the answer before your time runs out!</p>]]></text>
@@ -184,21 +184,26 @@
     		<box id="col1" position="relative" class="col-md-6" />
     		<box id="col2" position="relative" class="col-md-6" />
 
-    		<text id="question2" position="relative" target="col1" x="0" margin-top="150" margin-bottom="40" anim="left" animtime="0.5"><![CDATA[<p class="p_24">The number of questions I can add is:</p>]]></text>
+    		<text id="question2" position="relative" target="col1" x="0" margin-top="150" margin-bottom="40" anim="left" animtime="0.5"><![CDATA[<p class="p_24">Genellikle hangi tempoda ve nasıl konuşursunuz?</p>]]></text>
 			
 			<!--option 1 -->
 			<option correct="false">
-				<text id="option2_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Limited to 5</p>]]></text>
+				<text id="option2_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Hızlı ve sonuca yönelik</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
 			<option correct="false">
-				<text id="option2_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Limited to 10</p>]]></text>
+				<text id="option2_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Çok hızlı, heyecanlı ve eğlenceli</p>]]></text>
 			</option>
 			
 			<!--option 3 -->
 			<option correct="true">
-				<text id="option2_3" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Unlimited</p>]]></text>
+				<text id="option2_3" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Daha yavaş ve sakin</p>]]></text>
+			</option>
+
+			<!--option 4 -->
+			<option correct="true">
+				<text id="option2_4" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Normal ve söyleyeceklerimi aklımda tartarak</p>]]></text>
 			</option>
 			<!--/options -->
 			
@@ -234,21 +239,26 @@
     		<box id="col1" position="relative" class="col-md-6" />
     		<box id="col2" position="relative" class="col-md-6" />
 
-    		<text id="question3" position="relative" target="col1" x="0" margin-top="150" margin-bottom="40" anim="left" animtime="0.5"><![CDATA[<p class="p_24">If there is more than one correct option, can the engine handle it?</p>]]></text>
+    		<text id="question3" position="relative" target="col1" x="0" margin-top="150" margin-bottom="40" anim="left" animtime="0.5"><![CDATA[<p class="p_24">Bir işe motive olmanızı sağlayan en önemli unsur hangisidir?</p>]]></text>
 			
 			<!--option 1 -->
 			<option correct="true">
-				<text id="option3_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Yes. For example, this option is flagged as correct.</p>]]></text>
+				<text id="option3_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Sonuçları düşünmek</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
 			<option correct="true">
-				<text id="option3_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">And this option is <i>also</i> flagged as correct.</p>]]></text>
+				<text id="option3_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Onaylanmak, takdir edilmek</p>]]></text>
 			</option>
 			
 			<!--option 3 -->
 			<option correct="false">
-				<text id="option3_3" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.7" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">But this option is flagged as incorrect.</p>]]></text>
+				<text id="option3_3" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.7" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Guruptaki arkadaşlarımın desteği</p>]]></text>
+			</option>
+
+			<!--option 3 -->
+			<option correct="false">
+				<text id="option3_3" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.7" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Etkinlik, düzen ve disiplin</p>]]></text>
 			</option>
 			<!--/options -->
 
