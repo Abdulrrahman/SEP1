@@ -113,9 +113,9 @@
     <!--opening text-->
     <box id="openingText" position="relative" anim="left" animtime="0.5" animdelay="1" class="col-md-10 col-md-offset-1 vertical-align" z-index="3">
 
-    	<text id="title" position="relative" margin-top="20" anim="none"><![CDATA[<h1 class="black">Multiple Choice Quiz Engine</h1><p class="p_16_black">Welcome to this short quiz.</p><p class="p_16_black">For each question, select the answer before your time runs out!</p>]]></text>
+    	<text id="title" position="relative" margin-top="20" anim="none"><![CDATA[<h1 class="black">Kişilik Testi</h1><p class="p_16_black">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</p><p class="p_16_black">Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!</p>]]></text>
 
-    	<button id="goBtn" position="relative" height="40" width="100" margin-top="40" margin-bottom="20" anim="none" event="btnover,begin" target="title"><![CDATA[Let's go!]]></button>
+    	<button id="goBtn" position="relative" height="40" width="100" margin-top="40" margin-bottom="20" anim="none" event="btnover,begin" target="title"><![CDATA[BAŞLA!]]></button>
     </box>
 
     <!--timed quiz-->
@@ -436,12 +436,12 @@
 			
 			<!--option 1 -->
 			<option correct="true">
-				<text id="option6_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Zaman israfı ve işlerin gecikmesi</p>]]></text>
+				<text id="option6_1" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.5" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Zaman israfı ve işlerin gecikmesi</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
 			<option correct="true">
-				<text id="option6_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Tekrar gerektiren işler ve monotonluk</p>]]></text>
+				<text id="option6_2" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.6" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Tekrar gerektiren işler ve monotonluk</p>]]></text>
 			</option>
 			
 			<!--option 3 -->
@@ -451,7 +451,7 @@
 
 			<!--option 4 -->
 			<option correct="false">
-				<text id="option6_4" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.7" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Yanılmak ve yapılan hatanın tekrarlanması</p>]]></text>
+				<text id="option6_4" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.8" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Yanılmak ve yapılan hatanın tekrarlanması</p>]]></text>
 			</option>
 			<!--/options -->
 
@@ -506,22 +506,22 @@
 			
 			<!--option 1 -->
 			<option correct="false">
-				<text id="option7_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Olaylara yön veren ve otoriteyi kullanan</p>]]></text>
+				<text id="option7_1" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Olaylara yön veren ve otoriteyi kullanan</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
 			<option correct="false">
-				<text id="option7_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">İnsanları motive eden ve neşelendiren</p>]]></text>
+				<text id="option7_2" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">İnsanları motive eden ve neşelendiren</p>]]></text>
 			</option>
 			
 			<!--option 3 -->
 			<option correct="true">
-				<text id="option7_3" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Uzlaştırıcı ve grup içindeki uyumu sağlayan</p>]]></text>
+				<text id="option7_3" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Uzlaştırıcı ve grup içindeki uyumu sağlayan</p>]]></text>
 			</option>
 
 			<!--option 4 -->
 			<option correct="true">
-				<text id="option7_4" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Bilgi sağlayıcı, araştırıcı ve olayları takip eden</p>]]></text>
+				<text id="option7_4" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.8" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Bilgi sağlayıcı, araştırıcı ve olayları takip eden</p>]]></text>
 			</option>
 			<!--/options -->
 			
@@ -561,12 +561,12 @@
 			
 			<!--option 1 -->
 			<option correct="true">
-				<text id="option8_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Olaylar üzerindeki güç ve kontrolümün azaldığını hissetmek</p>]]></text>
+				<text id="option8_1" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.5" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Olaylar üzerindeki güç ve kontrolümün azaldığını hissetmek</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
 			<option correct="true">
-				<text id="option8_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Sıkıcı, rutin işler yapılan bir ortamda bulunmak</p>]]></text>
+				<text id="option8_2" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.6" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Sıkıcı, rutin işler yapılan bir ortamda bulunmak</p>]]></text>
 			</option>
 			
 			<!--option 3 -->
@@ -576,7 +576,7 @@
 
 			<!--option 4 -->
 			<option correct="false">
-				<text id="option8_4" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.7" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Düzensiz ortamlar ve eksik yapılan işler</p>]]></text>
+				<text id="option8_4" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.8" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Düzensiz ortamlar ve eksik yapılan işler</p>]]></text>
 			</option>
 			<!--/options -->
 
@@ -631,22 +631,22 @@
 			
 			<!--option 1 -->
 			<option correct="false">
-				<text id="option9_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Bunu zaten hak ettiğimi düşünürüm</p>]]></text>
+				<text id="option9_1" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Bunu zaten hak ettiğimi düşünürüm</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
 			<option correct="false">
-				<text id="option9_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Çok sevinirim ve sevincimi belli ederim</p>]]></text>
+				<text id="option9_2" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Çok sevinirim ve sevincimi belli ederim</p>]]></text>
 			</option>
 			
 			<!--option 3 -->
 			<option correct="true">
-				<text id="option9_3" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Hocama teşekkür eder ve saygı duyarım</p>]]></text>
+				<text id="option9_3" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.8" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Hocama teşekkür eder ve saygı duyarım</p>]]></text>
 			</option>
 
 			<!--option 4 -->
 			<option correct="true">
-				<text id="option9_4" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Hocamın nerede hata yaptığını merak eder, kağıdımı görmek isterim</p>]]></text>
+				<text id="option9_4" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.9" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Hocamın nerede hata yaptığını merak eder, kağıdımı görmek isterim</p>]]></text>
 			</option>
 			<!--/options -->
 			
@@ -686,22 +686,22 @@
 			
 			<!--option 1 -->
 			<option correct="true">
-				<text id="option10_1" position="relative" target="col1" x="match" width="100%" margin-bottom="5" anim="left" animtime="0.5" animdelay="0.5" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Konunun ana hatlarının konuşulması için, sonucun belli olmasından hemen sonra çıkmayı tercih ederim</p>]]></text>
+				<text id="option10_1" position="relative" target="col1" x="match" width="100%" margin-bottom="5" anim="left" animtime="0.9" animdelay="1.0" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Konunun ana hatlarının konuşulması için, sonucun belli olmasından hemen sonra çıkmayı tercih ederim</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
 			<option correct="true">
-				<text id="option10_2" position="relative" target="col1" x="match" width="100%" margin-bottom="5" anim="left" animtime="0.5" animdelay="0.6" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Toplantı eğlenceli bir şekilde devam ettiğinde sonuna kadar kalmayı, sıkıcı olmaya başladığında erken çıkmayı tercih ederim</p>]]></text>
+				<text id="option10_2" position="relative" target="col1" x="match" width="100%" margin-bottom="5" anim="left" animtime="0.9" animdelay="1.6" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Toplantı eğlenceli bir şekilde devam ettiğinde sonuna kadar kalmayı, sıkıcı olmaya başladığında erken çıkmayı tercih ederim</p>]]></text>
 			</option>
 			
 			<!--option 3 -->
 			<option correct="true">
-				<text id="option10_3" position="relative" target="col1" x="match" width="100%" margin-bottom="5" anim="left" animtime="0.5" animdelay="0.7" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Toplantının huzur içinde geçmesi ve güzel kararlar çıkması için üstüme düşeni yaparım</p>]]></text>
+				<text id="option10_3" position="relative" target="col1" x="match" width="100%" margin-bottom="5" anim="left" animtime="0.9" animdelay="1.8" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Toplantının huzur içinde geçmesi ve güzel kararlar çıkması için üstüme düşeni yaparım</p>]]></text>
 			</option>
 
 			<!--option 4 -->
 			<option correct="true">
-				<text id="option10_4" position="relative" target="col1" x="match" width="100%" margin-bottom="5" anim="left" animtime="0.5" animdelay="0.8" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Toplantıya vaktinden önce gelir, tüm detayları not eder ve bir değerlendirme yapmak için geç çıkarım</p>]]></text>
+				<text id="option10_4" position="relative" target="col1" x="match" width="100%" margin-bottom="5" anim="left" animtime="0.9" animdelay="2.0" event="optionover,select" class="optionBox"><![CDATA[<p class="p_16 white">Toplantıya vaktinden önce gelir, tüm detayları not eder ve bir değerlendirme yapmak için geç çıkarım</p>]]></text>
 			</option>
 			<!--/options -->
 
@@ -755,22 +755,22 @@
 			
 			<!--option 1 -->
 			<option correct="false">
-				<text id="option11_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">İnsanlar işleri istediğim gibi yapmadığında ve seri olmadıklarında sinirlenmek</p>]]></text>
+				<text id="option11_1" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">İnsanlar işleri istediğim gibi yapmadığında ve seri olmadıklarında sinirlenmek</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
 			<option correct="false">
-				<text id="option11_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Düzensiz, dağınık ve programsız olmak</p>]]></text>
+				<text id="option11_2" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Düzensiz, dağınık ve programsız olmak</p>]]></text>
 			</option>
 			
 			<!--option 3 -->
 			<option correct="true">
-				<text id="option11_3" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Kimseye hayır diyememek ve başkalarının işine koşarken kendi işimi aksatmak</p>]]></text>
+				<text id="option11_3" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Kimseye hayır diyememek ve başkalarının işine koşarken kendi işimi aksatmak</p>]]></text>
 			</option>
 
 			<!--option 4 -->
 			<option correct="true">
-				<text id="option11_4" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Her şeyin kusursuz ve mükemmel olmasını istemek, İnsanlar buna uymadığında sinirlenmek</p>]]></text>
+				<text id="option11_4" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.8" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Her şeyin kusursuz ve mükemmel olmasını istemek, İnsanlar buna uymadığında sinirlenmek</p>]]></text>
 			</option>
 			<!--/options -->
 			
@@ -810,22 +810,22 @@
 			
 			<!--option 1 -->
 			<option correct="false">
-				<text id="option12_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Kısa sürede karar alan ve harekete geçen yapım</p>]]></text>
+				<text id="option12_1" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Kısa sürede karar alan ve harekete geçen yapım</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
 			<option correct="false">
-				<text id="option12_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Girdiğim ortamlara neşe ve heyecan katan tarafım</p>]]></text>
+				<text id="option12_2" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Girdiğim ortamlara neşe ve heyecan katan tarafım</p>]]></text>
 			</option>
 			
 			<!--option 3 -->
 			<option correct="true">
-				<text id="option12_3" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Her türlü ortama uyum sağlama ve çatışmaları önleme gayretim</p>]]></text>
+				<text id="option12_3" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Her türlü ortama uyum sağlama ve çatışmaları önleme gayretim</p>]]></text>
 			</option>
 
 			<!--option 4 -->
 			<option correct="true">
-				<text id="option12_4" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Her şeyi planlı, programlı ve düzenli yapma huyum</p>]]></text>
+				<text id="option12_4" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.8" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Her şeyi planlı, programlı ve düzenli yapma huyum</p>]]></text>
 			</option>
 			<!--/options -->
 			
@@ -865,22 +865,22 @@
 			
 			<!--option 1 -->
 			<option correct="false">
-				<text id="option13_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Güçlü, kararlı, otoriter ve yönlendirici</p>]]></text>
+				<text id="option13_1" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Güçlü, kararlı, otoriter ve yönlendirici</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
 			<option correct="false">
-				<text id="option13_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Popüler, neşeli, sevimli ve muzip</p>]]></text>
+				<text id="option13_2" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Popüler, neşeli, sevimli ve muzip</p>]]></text>
 			</option>
 			
 			<!--option 3 -->
 			<option correct="true">
-				<text id="option13_3" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Barışçıl, sevecen, uyumlu ve sakin</p>]]></text>
+				<text id="option13_3" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Barışçıl, sevecen, uyumlu ve sakin</p>]]></text>
 			</option>
 
 			<!--option 4 -->
 			<option correct="true">
-				<text id="option13_4" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Tertipli, düzenli, disiplinli ve planlı</p>]]></text>
+				<text id="option13_4" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.8" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Tertipli, düzenli, disiplinli ve planlı</p>]]></text>
 			</option>
 			<!--/options -->
 			
@@ -920,22 +920,22 @@
 			
 			<!--option 1 -->
 			<option correct="false">
-				<text id="option14_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Öncelik verdiğim şeyleri yapacak şekilde düzenlenmiş sade bir masayı tercih ederim.</p>]]></text>
+				<text id="option14_1" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Öncelik verdiğim şeyleri yapacak şekilde düzenlenmiş sade bir masayı tercih ederim.</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
 			<option correct="false">
-				<text id="option14_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">İnsanlara karma karışık gelen; ama benim aradığım her şeyi bulduğum bir masada çalışırım.</p>]]></text>
+				<text id="option14_2" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">İnsanlara karma karışık gelen; ama benim aradığım her şeyi bulduğum bir masada çalışırım.</p>]]></text>
 			</option>
 			
 			<!--option 3 -->
 			<option correct="true">
-				<text id="option14_3" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Önce masamın üzerine gerekli olan her türlü araç gereci koyarım. Sık sık kalkarak enerjimi harcamak istemem.</p>]]></text>
+				<text id="option14_3" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Önce masamın üzerine gerekli olan her türlü araç gereci koyarım. Sık sık kalkarak enerjimi harcamak istemem.</p>]]></text>
 			</option>
 
 			<!--option 4 -->
 			<option correct="true">
-				<text id="option14_4" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">İyi bir iş çıkarmam için masam son derece derli-toplu ve düzenli olmalıdır.</p>]]></text>
+				<text id="option14_4" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.8" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">İyi bir iş çıkarmam için masam son derece derli-toplu ve düzenli olmalıdır.</p>]]></text>
 			</option>
 			<!--/options -->
 			
@@ -975,22 +975,22 @@
 			
 			<!--option 1 -->
 			<option correct="false">
-				<text id="option15_1" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Çok büyük tedirginlik duymam; çünkü ertesi gün o işi olması gerektiği gibi yapacağımdan eminimdir.</p>]]></text>
+				<text id="option15_1" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Çok büyük tedirginlik duymam; çünkü ertesi gün o işi olması gerektiği gibi yapacağımdan eminimdir.</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
 			<option correct="false">
-				<text id="option15_2" position="relative" target="col1" x="match" width="100%" margin-bottom="10" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Çok tedirginlik duymam; çünkü nasıl olsa işler bir şekilde hallolacaktır.</p>]]></text>
+				<text id="option15_2" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Çok tedirginlik duymam; çünkü nasıl olsa işler bir şekilde hallolacaktır.</p>]]></text>
 			</option>
 			
 			<!--option 3 -->
 			<option correct="true">
-				<text id="option15_3" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Sorumluluğun üstümde olmasından dolayı tedirginlik duyarım.</p>]]></text>
+				<text id="option15_3" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Sorumluluğun üstümde olmasından dolayı tedirginlik duyarım.</p>]]></text>
 			</option>
 
 			<!--option 4 -->
 			<option correct="true">
-				<text id="option15_4" position="relative" target="col1" x="match" width="100%" margin-bottom="40" anim="show" animtime="0.5" animdelay="0.7" event="optionover,selectandsubmit" class="optionBox" float="left"><![CDATA[<p class="p_16 white">Tedirginlik duyarım ve gecenin büyük bir bölümünde problemin nasıl çözüleceğiyle ilgili planlar yaparım.</p>]]></text>
+				<text id="option15_4" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.8" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white">Tedirginlik duyarım ve gecenin büyük bir bölümünde problemin nasıl çözüleceğiyle ilgili planlar yaparım.</p>]]></text>
 			</option>
 			<!--/options -->
 			
