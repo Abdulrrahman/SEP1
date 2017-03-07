@@ -131,12 +131,12 @@
     		<text id="question1" position="relative" target="col1" x="0" margin-top="150" margin-bottom="40" anim="left" animtime="0.5"><![CDATA[<p class="p_24">Aşağıdaki beyitlerden hangisi sizi daha iyi anlatır?</p>]]></text>
 			
 			<!--option 1 -->
-			<option correct="false">
+			<option correct="true">
 				<text id="option1_1" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white cent">Güçlü, kararlı, girişken ve doğuştan liderim. Düşer kalkar, yoluma devam ederim.</p>]]></text>
 			</option>
 			
 			<!--option 2 -->	
-			<option correct="true">
+			<option correct="false">
 				<text id="option1_2" position="relative" target="col1" x="match" width="100%" margin-bottom="20" anim="show" animtime="0.5" animdelay="0.6" event="optionover,selectandsubmit" class="optionBox"><![CDATA[<p class="p_16 white cent">Hayata anlamlı renkler katar eğlenceyi severim. Ömür boyu herkesin mutlu ve neşeli olmasını dilerim.</p>]]></text>
 			</option>
 
@@ -157,25 +157,27 @@
 				<box id="fb" position="relative" target="col2" margin-top="150" clear="both" anim="show" animtime="0.5">
 					<image id="passimage" position="relative" x="0" y="0" margin-bottom="30" anim="none" class="img-responsive"><![CDATA[lib/assets/nasa_correct1.jpg]]></image>
 
-					<text id="txt1" position="relative" anim="none" margin-bottom="30"><![CDATA[<p class="p_24">Correct!</p><p>All the questions, text, images, events and buttons are defined in XML so you can create your own quiz without changing any JavaScript.</p><p>You can also customise the timer by changing some simple settings and css. Or choose not to have a timer at all.</p>]]></text>
+					<text id="txt1" position="relative" anim="none" margin-bottom="30"><![CDATA[<p class="p_24">Güzel!</p><p>Süreye dikkat ediyorsun dimi? Bak çok beklersen tüm test patates olur ona göre ..</p><p>Şebek Şümbelek Elma Armut Karpuz kavun le le le lo lo lo</p>]]></text>
 			
-					<button id="nextQBtn" position="relative" width="150" margin-bottom="10" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+					<button id="nextQBtn" position="relative" width="150" margin-bottom="10" anim="none" event="btnover,loadNextQuestion"><![CDATA[Bir sonraki soru]]></button>
 
 					<text id="bottompad" position="relative" anim="none"><![CDATA[<p>&nbsp;</p>]]></text>
 				</box>
 			</fb>
-			
+
 			<fb id="fail" event="">	
-				<box id="fb" position="relative" target="col2" margin-top="150" clear="both" anim="show" animtime="0.5">
-					<image id="failimage" position="relative" x="0" y="0" margin-bottom="30" anim="none" class="img-responsive"><![CDATA[lib/assets/nasa_incorrect1.jpg]]></image>
 
-					<text id="txt1" position="relative" anim="none" margin-bottom="30"><![CDATA[<p class="p_24">Nope!</p><p>All the questions, text, images, events and buttons are defined in XML so you can create your own quiz without changing any JavaScript.</p><p>You can also customise the timer by changing some simple settings and css. Or choose not to have a timer at all.</p>]]></text>
+				<box id="fb" position="relative" target="col2" margin-top="150" clear="both" anim="show" animtime="0.5">
+					<image id="passimage" position="relative" x="0" y="0" margin-bottom="30" anim="none" class="img-responsive"><![CDATA[lib/assets/nasa_correct1.jpg]]></image>
+
+					<text id="txt1" position="relative" anim="none" margin-bottom="30"><![CDATA[<p class="p_24">Güzel!</p><p>Süreye dikkat ediyorsun dimi? Bak çok beklersen tüm test patates olur ona göre ..</p><p>Şebek Şümbelek Elma Armut Karpuz kavun le le le lo lo lo</p>]]></text>
 			
-					<button id="nextQBtn" position="relative" width="150" margin-bottom="10" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+					<button id="nextQBtn" position="relative" width="150" margin-bottom="10" anim="none" event="btnover,loadNextQuestion"><![CDATA[Bir sonraki soru]]></button>
 
 					<text id="bottompad" position="relative" anim="none"><![CDATA[<p>&nbsp;</p>]]></text>
 				</box>
 			</fb>
+			
 		</question>
 
 		<!-- question 2 -->
