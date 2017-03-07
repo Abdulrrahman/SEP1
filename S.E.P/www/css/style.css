@@ -28,7 +28,9 @@
     }
 
 .center {
+	/*padding-right: 25cm;/* here u can adjust the place of the card the way you like */
     margin-left: auto;
     margin-right: auto;
+	
     display: block;
 }
