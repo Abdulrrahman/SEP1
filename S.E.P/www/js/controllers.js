@@ -140,18 +140,35 @@ angular.module('SimpleRESTIonic.controllers', [])
     })
 
 
-    .controller('MainCtrl', function (ItemsModel, $rootScope,$state,$scope) {
-       var mv = this;
-       function start()
-       {
-        console.log("tell me about it");
-        mv.q0 = mv.q0 + 1;
-        mv.name = "q1";
-        $state.go($state.current, {}, { reload: true });
-       }
-       mv.start = start;
-       mv.q0 = 1;
+    .controller('MainCtrl', function (ItemsModel, $rootScope, $state, $scope, $ionicViewSwitcher,$ionicModal,$timeout) {
+        var mv = this;
+        function start() {
+            console.log("tell me about it");
+            mv.q0 = mv.q0 + 1;
+            mv.name = "q1";
+            $ionicViewSwitcher.nextDirection('forward');
+            $state.go($state.current, {}, { reload: true });
+        }
+        mv.start = start;
+        mv.q0 = 1;
 
-       $scope.name = "start";
+        mv.name = "start";
+
+        $scope.sw1 = function (data) {
+            //console.log(data);
+            $scope.modal1.show();
+            $timeout(function () {
+                $scope.closeAbout();
+            }, 25000);
+        };
+        $ionicModal.fromTemplateUrl('templates/subtemplates/sub1.html', {
+            scope: $scope
+        }).then(function (modal) {
+            $scope.modal1 = modal;
+        });
+
+        $scope.closesw1 = function () {
+            $scope.modal1.hide();
+        };
     });
 
