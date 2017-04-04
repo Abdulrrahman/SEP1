@@ -20,7 +20,7 @@ angular.module('SimpleRESTIonic', ['ionic', 'backand', 'SimpleRESTIonic.controll
             }
         });
     })
-    .config(function (BackandProvider, $stateProvider, $urlRouterProvider, $httpProvider) {
+    .config(function (BackandProvider, $stateProvider, $urlRouterProvider, $httpProvider,$ionicConfigProvider) {
 
         BackandProvider.setAppName('sep1'); // change here to your app name
         BackandProvider.setSignUpToken('840e232b-33d5-467b-a79f-a920453a0488'); //token that enable sign up. see http://docs.backand.com/en/latest/apidocs/security/index.html#sign-up
@@ -56,14 +56,24 @@ angular.module('SimpleRESTIonic', ['ionic', 'backand', 'SimpleRESTIonic.controll
                 views: {
                     'tab-main': {
                         templateUrl: 'templates/tab-main.html',
-                        controller: 'MainCtrl as Mv'
+                        controller: 'MainCtrl as mv'
+                    }
+                }
+            })
+            .state('tab.q1', {
+                url: '/q1',
+                views: {
+                    'q1': {
+                        templateUrl: 'templates/q1.html',
+                        controller: 'MainCtrl as mv'
                     }
                 }
             });
 
-        $urlRouterProvider.otherwise('/tabs/dashboard');
+        $urlRouterProvider.otherwise('/tabs/main');
 
         $httpProvider.interceptors.push('APIInterceptor');
+        
     })
 
     .run(function ($rootScope, $state, LoginService, Backand) {

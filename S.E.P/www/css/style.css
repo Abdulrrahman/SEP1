@@ -27,8 +27,14 @@
         background-size: cover;
     }
 
-.center {
-    margin-left: auto;
+.center1 {
+    margin-left: 10%;
+    margin-right: auto;
+	margin-top: 10%;
+    display: block;
+}
+.center2 {
+    margin-left: 10%;
     margin-right: auto;
     display: block;
 }

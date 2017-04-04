@@ -12,15 +12,15 @@ angular.module('SimpleRESTIonic.controllers', [])
                 })
         }
 
-        function anonymousLogin(){
+        function anonymousLogin() {
             LoginService.anonymousLogin();
             onLogin();
         }
 
-        function onLogin(){
+        function onLogin() {
             $rootScope.$broadcast('authorized');
             login.email = '';
-            login.password = '';            
+            login.password = '';
             $state.go('tab.dashboard');
         }
 
@@ -31,7 +31,7 @@ angular.module('SimpleRESTIonic.controllers', [])
                     login.email = '';
                     login.password = '';
                     $rootScope.$broadcast('logout');
-                    $state.go($state.current, {}, {reload: true});
+                    $state.go($state.current, {}, { reload: true });
                 })
 
         }
@@ -55,7 +55,7 @@ angular.module('SimpleRESTIonic.controllers', [])
                 });
         }
 
-        function clearData(){
+        function clearData() {
             vm.data = null;
         }
 
@@ -84,7 +84,7 @@ angular.module('SimpleRESTIonic.controllers', [])
         }
 
         function initCreateForm() {
-            vm.newObject = {name: '', description: ''};
+            vm.newObject = { name: '', description: '' };
         }
 
         function setEdited(object) {
@@ -130,7 +130,7 @@ angular.module('SimpleRESTIonic.controllers', [])
             clearData();
         });
 
-        if(!vm.isAuthorized){
+        if (!vm.isAuthorized) {
             $rootScope.$broadcast('logout');
         }
 
@@ -138,10 +138,20 @@ angular.module('SimpleRESTIonic.controllers', [])
         getAll();
 
     })
-    
-    
-    .controller('MainCtrl', function (ItemsModel, $rootScope) {
-    })
-    
-    ;
+
+
+    .controller('MainCtrl', function (ItemsModel, $rootScope,$state,$scope) {
+       var mv = this;
+       function start()
+       {
+        console.log("tell me about it");
+        mv.q0 = mv.q0 + 1;
+        mv.name = "q1";
+        $state.go($state.current, {}, { reload: true });
+       }
+       mv.start = start;
+       mv.q0 = 1;
+
+       $scope.name = "start";
+    });
 
