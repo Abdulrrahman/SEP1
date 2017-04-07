@@ -145,14 +145,14 @@ angular.module('SimpleRESTIonic.controllers', [])
         function start() {
             console.log("tell me about it");
             mv.q0 = mv.q0 + 1;
-            mv.name = "q1";
+            $scope.hi = "q1";
             $ionicViewSwitcher.nextDirection('forward');
             $state.go($state.current, {}, { reload: true });
         }
         mv.start = start;
         mv.q0 = 1;
 
-        mv.name = "start";
+        $scope.hi = "start";
 
         $scope.sw1 = function (data) {
             //console.log(data);

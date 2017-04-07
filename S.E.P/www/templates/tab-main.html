@@ -1,5 +1,5 @@
 <ion-nav-bar class="bar-dark">
-  <ion-view view-title="mv.name">
+  <ion-view view-title="hi">
     <div ng-if="mv.q0 === 1">
       <ion-content class="bg">
         <div class="row">
@@ -12,7 +12,7 @@
                   </h1>
                 </center>
               </div>
-              <div class="item item-text-wrap item-stable">
+              <div class="item item-text-wrap item-dark">
                 Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
               </div>
               <div class="item item-divider item-dark">
@@ -21,10 +21,10 @@
                 </p>
               </div>
             </div>
-            <div class="center2">
-              <button ng-click="sw1()" class="button button-dark" align="center">
-              Start
-          </button>
+            <center><div>
+              <button ng-click="mv.start()" class="button button-dark" align="center">
+              BAŞLA!
+          </button></center>
             </div>
           </div>
         </div>
@@ -35,26 +35,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Aşağıdaki beyitlerden hangisi sizi daha iyi anlatır?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Güçlü, kararlı, girişken ve doğuştan liderim. Düşer kalkar, yoluma devam ederim.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">Hayata anlamlı renkler katar eğlenceyi severim. Ömür boyu herkesin mutlu ve neşeli olmasını dilerim.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Her anımı huzurlu ve sakin geçirmek isterim. Kavga gürültü sevmem, işlerimde en kolay yolu seçerim.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Her şeyin mükemmel, düzgün, kusursuz olmasını isterim. İlişkilerimde saygı ve mesafeli olmayı severim.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -65,26 +62,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Genellikle hangi tempoda ve nasıl konuşursunuz?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Hızlı ve sonuca yönelik.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">Çok hızlı, heyecanlı ve eğlenceli.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Daha yavaş ve sakin.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Normal ve söyleyeceklerimi aklımda tartarak.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -95,26 +89,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}} {{mv.q0}}</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Bir işe motive olmanızı sağlayan en önemli unsur hangisidir?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Sonuçları düşünmek.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">Onaylanmak, takdir edilmek.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Guruptaki arkadaşlarımın desteği.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Etkinlik, düzen ve disiplin.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -125,26 +116,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Çalışma tarzınız hangisine uygundur?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Yoğun ve hızlıyımdır. Aynı anda birkaç işi bir arada yapabilirim.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">Özgür bir ortamda çalışırım. İnsan ilişkileri odaklıyımdır.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Ön planda olmayan; ama gruba her türlü desteği veren bir yapım vardır.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Ayrıntıları önemserim ve tek bir konuya daklanarak çalışırım.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -155,26 +143,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Çalışma temponuzu nasıl değerlendiriyorsunuz?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Hızlı bir tempoda çalışır, çabuk karar almayı severim.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">İşlerin, rutin ve sıkıcı olmadığı ortamlarda yüksek motivasyonla çalışırım.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Nadiren aceleciyimdir. Geçde olsa üstlendiğim işi bitiririm.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Ayrıntılı düşünerek karar veririm. İş bitirici bir tempoyla çalışırım.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -185,26 +170,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Hangisi sizi daha çok rahatsız eder?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Zaman israfı ve işlerin gecikmesi.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">Tekrar gerektiren işler ve monotonluk.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Çatışma ortamı ve anlaşmazlıklar</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Yanılmak ve yapılan hatanın tekrarlanması.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -215,26 +197,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Bulunduğunuz gruplarda hangi konumda daha başarılı olursunuz?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Olaylara yön veren ve otoriteyi kullanan.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">İnsanları motive eden ve neşelendiren.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Uzlaştırıcı ve grup içindeki uyumu sağlayan.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Bilgi sağlayıcı, araştırıcı ve olayları takip eden.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -245,26 +224,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Hangisi sizi daha çok strese sokar?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Olaylar üzerindeki güç ve kontrolümün azaldığını hissetmek.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">Sıkıcı, rutin işler yapılan bir ortamda bulunmak.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Beni aşacağını düşündüğüm sorumluluklar üstlenmek.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Düzensiz ortamlar ve eksik yapılan işler.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -275,26 +251,24 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Bir öğrenci olsanız ve öğretmeniniz sınav kağıdınızı ikinci defa incelediğinde puanınızı artırdığını söylese,
+                nasıl bir tepki verirsiniz?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Bunu zaten hak ettiğimi düşünürüm.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">Çok sevinirim ve sevincimi belli ederim.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Hocama teşekkür eder ve saygı duyarım.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Hocamın nerede hata yaptığını merak eder, kağıdımı görmek isterim.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -305,26 +279,24 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Saatler sürecek bir iş toplantısına katılmanız gerektiğinde aşağıdakilerden hangisini benimsersiniz?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Konunun ana hatlarının konuşulması için, sonucun belli olmasından hemen sonra çıkmayı tercih ederim.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">Toplantı eğlenceli bir şekilde devam ettiğinde sonuna kadar kalmayı, sıkıcı olmaya başladığında erken çıkmayı
+                    tercih ederim.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Toplantının huzur içinde geçmesi ve güzel kararlar çıkması için üstüme düşeni yaparım.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Toplantıya vaktinden önce gelir, tüm detayları not eder ve bir değerlendirme yapmak için geç çıkarım.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -335,26 +307,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Kendinizde gördüğünüz en zayıf yönünüz hangisidir?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">İnsanlar işleri istediğim gibi yapmadığında ve seri olmadıklarında sinirlenmek.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">Düzensiz, dağınık ve programsız olmak.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Kimseye hayır diyememek ve başkalarının işine koşarken kendi işimi aksatmak.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Her şeyin kusursuz ve mükemmel olmasını istemek, insanlar buna uymadığında sinirlenmek.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -365,26 +334,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Kendinizde gördüğünüz en güçlü yönünüz hangisidir?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Kısa sürede karar alan ve harekete geçen yapım.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">Girdiğim ortamlara neşe ve heyecan katan tarafım.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Her türlü ortama uyum sağlama ve çatışmaları önleme gayretim.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Her şeyi planlı, programlı ve düzenli yapma huyum.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -395,26 +361,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Aşağıdaki ifadelerden hangisi sizi daha iyi tanımlar?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Güçlü, kararlı, otoriter ve yönlendirici.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">Popüler, neşeli, sevimli ve muzip.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Barışçıl, sevecen, uyumlu ve sakin.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Tertipli, düzenli, disiplinli ve planlı.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -425,26 +388,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Çalışma masanızda nelere dikkat edersiniz?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Öncelik verdiğim şeyleri yapacak şekilde düzenlenmiş sade bir masayı tercih ederim.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">İnsanlara karma karışık gelen; ama benim aradığım her şeyi bulduğum bir masada çalışırım.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Önce masamın üzerine gerekli olan her türlü araç gereci koyarım. Sık sık kalkarak enerjimi harcamak istemem.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">İyi bir iş çıkarmam için masam son derece derli-toplu ve düzenli olmalıdır.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -455,26 +415,23 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
-              </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
+              <div class="item item-text-wrap item-divider">
+                Soru {{mv.q0-1}}: Ertesi gün çözülmesi gereken bir problem varsa o akşamki ruh haliniz nasıl olur?
               </div>
             </div>
             <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
+              <div>
+                <ion-list>
+                  <ion-radio ng-model="choice" ng-value="'A'">Çok büyük tedirginlik duymam; çünkü ertesi gün o işi olması gerektiği gibi yapacağımdan eminimdir.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'B'">Çok tedirginlik duymam; çünkü nasıl olsa işler bir şekilde hallolacaktır.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'C'">Sorumluluğun üstümde olmasından dolayı tedirginlik duyarım.</ion-radio>
+                  <ion-radio ng-model="choice" ng-value="'D'">Tedirginlik duyarım ve gecenin büyük bir bölümünde problemin nasıl çözüleceğiyle ilgili planlar yaparım.</ion-radio>
+                </ion-list>
+                <br>
+                <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
           </button>
+              </div>
             </div>
           </div>
         </div>
@@ -485,30 +442,14 @@
         <div class="row">
           <div class="center1">
             <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}2</font>
-                  </h1>
-                </center>
+              <div class="item item-text-wrap item-divider">
+                YEAAY! u r an idiot
               </div>
-              <div class="item item-text-wrap item-stable">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
-              </div>
-            </div>
-            <div class="center2">
-              <button ng-click="mv.start()" class="button button-dark" align="center">
-              Start
-          </button>
             </div>
           </div>
         </div>
-      </ion-content>
+    </div>
+    </ion-content>
     </div>
   </ion-view>
 </ion-nav-bar>

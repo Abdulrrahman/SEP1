@@ -28,13 +28,13 @@
     }
 
 .center1 {
-    margin-left: 10%;
+    margin-left: 5%;
     margin-right: auto;
 	margin-top: 10%;
     display: block;
 }
 .center2 {
-    margin-left: 10%;
-    margin-right: auto;
+    margin-left: 1%;
+    margin-right: -5%;
     display: block;
 }
