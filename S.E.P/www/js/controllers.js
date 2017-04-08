@@ -142,8 +142,19 @@ angular.module('SimpleRESTIonic.controllers', [])
 
     .controller('MainCtrl', function (ItemsModel, $rootScope, $state, $scope, $ionicViewSwitcher, $ionicModal, $timeout) {
         var mv = this;
+        function is2selected()
+        {
+            var son = 0;
+            for (var i = 0; i < 4; i++) {
+                    if ($scope.choice[i] == true) {
+                        son++;
+                    }
+                }
+            if(son == 2 || son == 1)return true;
+            else return false;
+        }
         function calc() {
-            var son = 0
+            var son = 0;
             while (son != 2) {
                 for (var i = 0; i < 4; i++) {
                     if ($scope.choice[i] == true && son < 2) {
@@ -154,7 +165,7 @@ angular.module('SimpleRESTIonic.controllers', [])
             }
         }
         function start() {
-            if ($scope.choice[0] == false && $scope.choice[1] == false && $scope.choice[2] == false && $scope.choice[3] == false && mv.q0 != 1) {
+            if (is2selected() == false && mv.q0 != 1) {
                 $scope.sw1();
             }
             else {
@@ -181,6 +192,7 @@ angular.module('SimpleRESTIonic.controllers', [])
             //console.log(data);
             $scope.modal1.show();
             $timeout(function () {
+                $scope.choice = [false, false, false, false];
                 $scope.closesw1();
             }, 25000);
         };
@@ -191,6 +203,7 @@ angular.module('SimpleRESTIonic.controllers', [])
         });
 
         $scope.closesw1 = function () {
+            $scope.choice = [false, false, false, false];
             $scope.modal1.hide();
         };
     });
