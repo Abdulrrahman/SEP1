@@ -163,6 +163,7 @@ angular.module('SimpleRESTIonic.controllers', [])
                 $scope.hi = "Soru : " + mv.q0;
                 mv.q0 = mv.q0 + 1;
                 console.log(mv.result);
+                $scope.choice = [false, false, false, false];
                 $ionicViewSwitcher.nextDirection('forward');
                 $state.go($state.current, {}, { reload: true });
             }

@@ -67,12 +67,12 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Hızlı ve sonuca yönelik.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">Çok hızlı, heyecanlı ve eğlenceli.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Daha yavaş ve sakin.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Normal ve söyleyeceklerimi aklımda tartarak.</ion-radio>
-                </ion-list>
+
+                  <ion-checkbox ng-model="choice[0]">Hızlı ve sonuca yönelik.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Çok hızlı, heyecanlı ve eğlenceli.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Daha yavaş ve sakin.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Normal ve söyleyeceklerimi aklımda tartarak.</ion-checkbox>
+
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -94,12 +94,10 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Sonuçları düşünmek.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">Onaylanmak, takdir edilmek.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Guruptaki arkadaşlarımın desteği.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Etkinlik, düzen ve disiplin.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">Sonuçları düşünmek.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Onaylanmak, takdir edilmek.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Guruptaki arkadaşlarımın desteği.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Etkinlik, düzen ve disiplin.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -121,12 +119,10 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Yoğun ve hızlıyımdır. Aynı anda birkaç işi bir arada yapabilirim.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">Özgür bir ortamda çalışırım. İnsan ilişkileri odaklıyımdır.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Ön planda olmayan; ama gruba her türlü desteği veren bir yapım vardır.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Ayrıntıları önemserim ve tek bir konuya daklanarak çalışırım.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">Yoğun ve hızlıyımdır. Aynı anda birkaç işi bir arada yapabilirim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Özgür bir ortamda çalışırım. İnsan ilişkileri odaklıyımdır.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Ön planda olmayan; ama gruba her türlü desteği veren bir yapım vardır.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Ayrıntıları önemserim ve tek bir konuya daklanarak çalışırım.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -148,12 +144,10 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Hızlı bir tempoda çalışır, çabuk karar almayı severim.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">İşlerin, rutin ve sıkıcı olmadığı ortamlarda yüksek motivasyonla çalışırım.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Nadiren aceleciyimdir. Geçde olsa üstlendiğim işi bitiririm.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Ayrıntılı düşünerek karar veririm. İş bitirici bir tempoyla çalışırım.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">Hızlı bir tempoda çalışır, çabuk karar almayı severim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">İşlerin, rutin ve sıkıcı olmadığı ortamlarda yüksek motivasyonla çalışırım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Nadiren aceleciyimdir. Geçde olsa üstlendiğim işi bitiririm.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Ayrıntılı düşünerek karar veririm. İş bitirici bir tempoyla çalışırım.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -175,12 +169,10 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Zaman israfı ve işlerin gecikmesi.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">Tekrar gerektiren işler ve monotonluk.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Çatışma ortamı ve anlaşmazlıklar</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Yanılmak ve yapılan hatanın tekrarlanması.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">Zaman israfı ve işlerin gecikmesi.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Tekrar gerektiren işler ve monotonluk.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Çatışma ortamı ve anlaşmazlıklar</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Yanılmak ve yapılan hatanın tekrarlanması.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -202,12 +194,10 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Olaylara yön veren ve otoriteyi kullanan.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">İnsanları motive eden ve neşelendiren.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Uzlaştırıcı ve grup içindeki uyumu sağlayan.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Bilgi sağlayıcı, araştırıcı ve olayları takip eden.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">Olaylara yön veren ve otoriteyi kullanan.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">İnsanları motive eden ve neşelendiren.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Uzlaştırıcı ve grup içindeki uyumu sağlayan.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Bilgi sağlayıcı, araştırıcı ve olayları takip eden.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -229,12 +219,10 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Olaylar üzerindeki güç ve kontrolümün azaldığını hissetmek.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">Sıkıcı, rutin işler yapılan bir ortamda bulunmak.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Beni aşacağını düşündüğüm sorumluluklar üstlenmek.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Düzensiz ortamlar ve eksik yapılan işler.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">Olaylar üzerindeki güç ve kontrolümün azaldığını hissetmek.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Sıkıcı, rutin işler yapılan bir ortamda bulunmak.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Beni aşacağını düşündüğüm sorumluluklar üstlenmek.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Düzensiz ortamlar ve eksik yapılan işler.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -257,12 +245,10 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Bunu zaten hak ettiğimi düşünürüm.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">Çok sevinirim ve sevincimi belli ederim.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Hocama teşekkür eder ve saygı duyarım.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Hocamın nerede hata yaptığını merak eder, kağıdımı görmek isterim.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">Bunu zaten hak ettiğimi düşünürüm.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Çok sevinirim ve sevincimi belli ederim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Hocama teşekkür eder ve saygı duyarım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Hocamın nerede hata yaptığını merak eder, kağıdımı görmek isterim.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -284,13 +270,11 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Konunun ana hatlarının konuşulması için, sonucun belli olmasından hemen sonra çıkmayı tercih ederim.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">Toplantı eğlenceli bir şekilde devam ettiğinde sonuna kadar kalmayı, sıkıcı olmaya başladığında erken çıkmayı
-                    tercih ederim.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Toplantının huzur içinde geçmesi ve güzel kararlar çıkması için üstüme düşeni yaparım.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Toplantıya vaktinden önce gelir, tüm detayları not eder ve bir değerlendirme yapmak için geç çıkarım.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">Konunun ana hatlarının konuşulması için, sonucun belli olmasından hemen sonra çıkmayı tercih ederim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Toplantı eğlenceli bir şekilde devam ettiğinde sonuna kadar kalmayı, sıkıcı olmaya başladığında erken çıkmayı
+                     tercih ederim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Toplantının huzur içinde geçmesi ve güzel kararlar çıkması için üstüme düşeni yaparım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Toplantıya vaktinden önce gelir, tüm detayları not eder ve bir değerlendirme yapmak için geç çıkarım.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -312,12 +296,10 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">İnsanlar işleri istediğim gibi yapmadığında ve seri olmadıklarında sinirlenmek.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">Düzensiz, dağınık ve programsız olmak.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Kimseye hayır diyememek ve başkalarının işine koşarken kendi işimi aksatmak.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Her şeyin kusursuz ve mükemmel olmasını istemek, insanlar buna uymadığında sinirlenmek.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">İnsanlar işleri istediğim gibi yapmadığında ve seri olmadıklarında sinirlenmek.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Düzensiz, dağınık ve programsız olmak.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Kimseye hayır diyememek ve başkalarının işine koşarken kendi işimi aksatmak.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Her şeyin kusursuz ve mükemmel olmasını istemek, insanlar buna uymadığında sinirlenmek.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -339,12 +321,10 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Kısa sürede karar alan ve harekete geçen yapım.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">Girdiğim ortamlara neşe ve heyecan katan tarafım.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Her türlü ortama uyum sağlama ve çatışmaları önleme gayretim.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Her şeyi planlı, programlı ve düzenli yapma huyum.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">Kısa sürede karar alan ve harekete geçen yapım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Girdiğim ortamlara neşe ve heyecan katan tarafım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Her türlü ortama uyum sağlama ve çatışmaları önleme gayretim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Her şeyi planlı, programlı ve düzenli yapma huyum.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -366,12 +346,10 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Güçlü, kararlı, otoriter ve yönlendirici.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">Popüler, neşeli, sevimli ve muzip.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Barışçıl, sevecen, uyumlu ve sakin.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Tertipli, düzenli, disiplinli ve planlı.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">Güçlü, kararlı, otoriter ve yönlendirici.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Popüler, neşeli, sevimli ve muzip.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Barışçıl, sevecen, uyumlu ve sakin.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Tertipli, düzenli, disiplinli ve planlı.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -393,12 +371,10 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Öncelik verdiğim şeyleri yapacak şekilde düzenlenmiş sade bir masayı tercih ederim.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">İnsanlara karma karışık gelen; ama benim aradığım her şeyi bulduğum bir masada çalışırım.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Önce masamın üzerine gerekli olan her türlü araç gereci koyarım. Sık sık kalkarak enerjimi harcamak istemem.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">İyi bir iş çıkarmam için masam son derece derli-toplu ve düzenli olmalıdır.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">Öncelik verdiğim şeyleri yapacak şekilde düzenlenmiş sade bir masayı tercih ederim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">İnsanlara karma karışık gelen; ama benim aradığım her şeyi bulduğum bir masada çalışırım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Önce masamın üzerine gerekli olan her türlü araç gereci koyarım. Sık sık kalkarak enerjimi harcamak istemem.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">İyi bir iş çıkarmam için masam son derece derli-toplu ve düzenli olmalıdır.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
@@ -420,12 +396,10 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Çok büyük tedirginlik duymam; çünkü ertesi gün o işi olması gerektiği gibi yapacağımdan eminimdir.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">Çok tedirginlik duymam; çünkü nasıl olsa işler bir şekilde hallolacaktır.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Sorumluluğun üstümde olmasından dolayı tedirginlik duyarım.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Tedirginlik duyarım ve gecenin büyük bir bölümünde problemin nasıl çözüleceğiyle ilgili planlar yaparım.</ion-radio>
-                </ion-list>
+                  <ion-checkbox ng-model="choice[0]">Çok büyük tedirginlik duymam; çünkü ertesi gün o işi olması gerektiği gibi yapacağımdan eminimdir.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Çok tedirginlik duymam; çünkü nasıl olsa işler bir şekilde hallolacaktır.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Sorumluluğun üstümde olmasından dolayı tedirginlik duyarım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Tedirginlik duyarım ve gecenin büyük bir bölümünde problemin nasıl çözüleceğiyle ilgili planlar yaparım.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
