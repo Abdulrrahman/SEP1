@@ -1,5 +1,5 @@
 <ion-nav-bar class="bar-dark">
-  <ion-view view-title="hi">
+  <ion-view view-title="{{hi}}">
     <div ng-if="mv.q0 === 1">
       <ion-content class="bg">
         <div class="row">
@@ -21,8 +21,9 @@
                 </p>
               </div>
             </div>
-            <center><div>
-              <button ng-click="mv.start()" class="button button-dark" align="center">
+            <center>
+              <div>
+                <button ng-click="mv.start()" class="button button-dark" align="center">
               BAŞLA!
           </button></center>
             </div>
@@ -41,16 +42,14 @@
             </div>
             <div class="center2">
               <div>
-                <ion-list>
-                  <ion-radio ng-model="choice" ng-value="'A'">Güçlü, kararlı, girişken ve doğuştan liderim. Düşer kalkar, yoluma devam ederim.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'B'">Hayata anlamlı renkler katar eğlenceyi severim. Ömür boyu herkesin mutlu ve neşeli olmasını dilerim.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'C'">Her anımı huzurlu ve sakin geçirmek isterim. Kavga gürültü sevmem, işlerimde en kolay yolu seçerim.</ion-radio>
-                  <ion-radio ng-model="choice" ng-value="'D'">Her şeyin mükemmel, düzgün, kusursuz olmasını isterim. İlişkilerimde saygı ve mesafeli olmayı severim.</ion-radio>
-                </ion-list>
+                <ion-checkbox ng-model="choice[0]">Güçlü, kararlı, girişken ve doğuştan liderim. Düşer kalkar, yoluma devam ederim.</ion-checkbox>
+                <ion-checkbox ng-model="choice[1]">Hayata anlamlı renkler katar eğlenceyi severim. Ömür boyu herkesin mutlu ve neşeli olmasını dilerim.</ion-checkbox>
+                <ion-checkbox ng-model="choice[2]">Her anımı huzurlu ve sakin geçirmek isterim. Kavga gürültü sevmem, işlerimde en kolay yolu seçerim.</ion-checkbox>
+                <ion-checkbox ng-model="choice[3]">Her şeyin mükemmel, düzgün, kusursuz olmasını isterim. İlişkilerimde saygı ve mesafeli olmayı severim.</ion-checkbox>
                 <br>
                 <button ng-click="mv.start()" class="button button-stable" align="center">
-              Bir Sonraki
-          </button>
+                  Bir Sonraki
+                </button>
               </div>
             </div>
           </div>

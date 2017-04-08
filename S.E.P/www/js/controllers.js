@@ -140,25 +140,47 @@ angular.module('SimpleRESTIonic.controllers', [])
     })
 
 
-    .controller('MainCtrl', function (ItemsModel, $rootScope, $state, $scope, $ionicViewSwitcher,$ionicModal,$timeout) {
+    .controller('MainCtrl', function (ItemsModel, $rootScope, $state, $scope, $ionicViewSwitcher, $ionicModal, $timeout) {
         var mv = this;
-        function start() {
-            console.log("tell me about it");
-            mv.q0 = mv.q0 + 1;
-            $scope.hi = "q1";
-            $ionicViewSwitcher.nextDirection('forward');
-            $state.go($state.current, {}, { reload: true });
+        function calc() {
+            var son = 0
+            while (son != 2) {
+                for (var i = 0; i < 4; i++) {
+                    if ($scope.choice[i] == true && son < 2) {
+                        son++;
+                        mv.result[i]++;
+                    }
+                }
+            }
         }
+        function start() {
+            if ($scope.choice[0] == false && $scope.choice[1] == false && $scope.choice[2] == false && $scope.choice[3] == false && mv.q0 != 1) {
+                $scope.sw1();
+            }
+            else {
+                if(mv.q0 != 1)
+                    calc();
+                $scope.hi = "Soru : " + mv.q0;
+                mv.q0 = mv.q0 + 1;
+                console.log(mv.result);
+                $ionicViewSwitcher.nextDirection('forward');
+                $state.go($state.current, {}, { reload: true });
+            }
+
+        }
+
+
         mv.start = start;
         mv.q0 = 1;
-
         $scope.hi = "start";
+        $scope.choice = [false, false, false, false];
+        mv.result = [0, 0, 0, 0];
 
         $scope.sw1 = function (data) {
             //console.log(data);
             $scope.modal1.show();
             $timeout(function () {
-                $scope.closeAbout();
+                $scope.closesw1();
             }, 25000);
         };
         $ionicModal.fromTemplateUrl('templates/subtemplates/sub1.html', {
