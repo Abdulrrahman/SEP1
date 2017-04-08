@@ -142,17 +142,27 @@ angular.module('SimpleRESTIonic.controllers', [])
 
     .controller('MainCtrl', function (ItemsModel, $rootScope, $state, $scope, $ionicViewSwitcher, $ionicModal, $timeout) {
         var mv = this;
-        function is2selected()
-        {
+
+        function timeout() {
+            mv.q0 = 1;
+            $scope.hi = "start";
+            $scope.choice = [false, false, false, false];
+            mv.result = [0, 0, 0, 0];
+            $ionicViewSwitcher.nextDirection('back');
+            $state.go($state.current, {}, { reload: true });
+        }
+
+        function is2selected() {
             var son = 0;
             for (var i = 0; i < 4; i++) {
-                    if ($scope.choice[i] == true) {
-                        son++;
-                    }
+                if ($scope.choice[i] == true) {
+                    son++;
                 }
-            if(son == 2 || son == 1)return true;
+            }
+            if (son == 2 || son == 1) return true;
             else return false;
         }
+
         function calc() {
             var son = 0;
             while (son != 2) {
@@ -164,16 +174,19 @@ angular.module('SimpleRESTIonic.controllers', [])
                 }
             }
         }
+
         function start() {
             if (is2selected() == false && mv.q0 != 1) {
+                $scope.choice = [false, false, false, false];
                 $scope.sw1();
             }
             else {
-                if(mv.q0 != 1)
+                if (mv.q0 != 1)
                     calc();
                 $scope.hi = "Soru : " + mv.q0;
                 mv.q0 = mv.q0 + 1;
-                console.log(mv.result);
+                $timeout.cancel(mv.starttimeer);
+                mv.starttimeer = $timeout(timeout,5000);
                 $scope.choice = [false, false, false, false];
                 $ionicViewSwitcher.nextDirection('forward');
                 $state.go($state.current, {}, { reload: true });
@@ -181,7 +194,7 @@ angular.module('SimpleRESTIonic.controllers', [])
 
         }
 
-
+        mv.starttimeer;
         mv.start = start;
         mv.q0 = 1;
         $scope.hi = "start";
@@ -192,7 +205,6 @@ angular.module('SimpleRESTIonic.controllers', [])
             //console.log(data);
             $scope.modal1.show();
             $timeout(function () {
-                $scope.choice = [false, false, false, false];
                 $scope.closesw1();
             }, 25000);
         };
@@ -203,7 +215,6 @@ angular.module('SimpleRESTIonic.controllers', [])
         });
 
         $scope.closesw1 = function () {
-            $scope.choice = [false, false, false, false];
             $scope.modal1.hide();
         };
     });
