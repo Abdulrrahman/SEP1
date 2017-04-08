@@ -143,6 +143,15 @@ angular.module('SimpleRESTIonic.controllers', [])
     .controller('MainCtrl', function (ItemsModel, $rootScope, $state, $scope, $ionicViewSwitcher, $ionicModal, $timeout) {
         var mv = this;
 
+        function changetoenglish()
+        {
+            mv.lang = "EN";
+        }
+        function changetoturkish()
+        {
+            mv.lang = "TR";
+        }
+
         function timeout() {
             mv.q0 = 1;
             $scope.hi = "start";
@@ -194,12 +203,15 @@ angular.module('SimpleRESTIonic.controllers', [])
 
         }
 
-        mv.starttimeer;
+        mv.starttimeer = $timeout;
         mv.start = start;
         mv.q0 = 1;
         $scope.hi = "start";
         $scope.choice = [false, false, false, false];
         mv.result = [0, 0, 0, 0];
+        mv.lang = "TR";
+        mv.changetoenglish = changetoenglish;
+        mv.changetoturkish = changetoturkish;
 
         $scope.sw1 = function (data) {
             //console.log(data);

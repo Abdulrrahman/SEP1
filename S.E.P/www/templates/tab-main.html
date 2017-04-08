@@ -1,428 +1,858 @@
 <ion-nav-bar class="bar-dark">
   <ion-view view-title="{{hi}}">
-    <div ng-if="mv.q0 === 1">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-divider item-dark">
-                <center>
-                  <h1>
-                    <font color="white">Kişilik Testi {{mv.q0}}</font>
-                  </h1>
-                </center>
+    <ion-nav-buttons side="right">
+      <button class="button button-balanced" ng-click="mv.changetoenglish()">EN</button>
+      <button class="button button-balanced" ng-click="mv.changetoturkish()">TR</button>
+    </ion-nav-buttons>
+    <div ng-if="mv.lang === 'TR'">
+      <div ng-if="mv.q0 === 1">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-divider item-dark">
+                  <center>
+                    <h1>
+                      <font color="white">Kişilik Testi {{mv.q0}}</font>
+                    </h1>
+                  </center>
+                </div>
+                <div class="item item-text-wrap item-dark">
+                  Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
+                </div>
+                <div class="item item-divider item-dark">
+                  <p>
+                    <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
+                  </p>
+                </div>
               </div>
-              <div class="item item-text-wrap item-dark">
-                Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
-              </div>
-              <div class="item item-divider item-dark">
-                <p>
-                  <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                </p>
-              </div>
-            </div>
-            <center>
-              <div>
-                <button ng-click="mv.start()" class="button button-dark" align="center">
+              <center>
+                <div>
+                  <button ng-click="mv.start()" class="button button-dark" align="center">
               BAŞLA!
           </button></center>
-            </div>
-          </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 2">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Aşağıdaki beyitlerden hangisi sizi daha iyi anlatır?
               </div>
             </div>
-            <div class="center2">
-              <div>
-                <ion-checkbox ng-model="choice[0]">Güçlü, kararlı, girişken ve doğuştan liderim. Düşer kalkar, yoluma devam ederim.</ion-checkbox>
-                <ion-checkbox ng-model="choice[1]">Hayata anlamlı renkler katar eğlenceyi severim. Ömür boyu herkesin mutlu ve neşeli olmasını dilerim.</ion-checkbox>
-                <ion-checkbox ng-model="choice[2]">Her anımı huzurlu ve sakin geçirmek isterim. Kavga gürültü sevmem, işlerimde en kolay yolu seçerim.</ion-checkbox>
-                <ion-checkbox ng-model="choice[3]">Her şeyin mükemmel, düzgün, kusursuz olmasını isterim. İlişkilerimde saygı ve mesafeli olmayı severim.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 2">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Aşağıdaki beyitlerden hangisi sizi daha iyi anlatır?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Güçlü, kararlı, girişken ve doğuştan liderim. Düşer kalkar, yoluma devam ederim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Hayata anlamlı renkler katar eğlenceyi severim. Ömür boyu herkesin mutlu ve neşeli olmasını dilerim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Her anımı huzurlu ve sakin geçirmek isterim. Kavga gürültü sevmem, işlerimde en kolay yolu seçerim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Her şeyin mükemmel, düzgün, kusursuz olmasını isterim. İlişkilerimde saygı ve mesafeli olmayı severim.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
                   Bir Sonraki
                 </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 3">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Genellikle hangi tempoda ve nasıl konuşursunuz?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 3">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Genellikle hangi tempoda ve nasıl konuşursunuz?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
 
                   <ion-checkbox ng-model="choice[0]">Hızlı ve sonuca yönelik.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">Çok hızlı, heyecanlı ve eğlenceli.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Daha yavaş ve sakin.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Normal ve söyleyeceklerimi aklımda tartarak.</ion-checkbox>
 
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 4">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Bir işe motive olmanızı sağlayan en önemli unsur hangisidir?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 4">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Bir işe motive olmanızı sağlayan en önemli unsur hangisidir?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">Sonuçları düşünmek.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">Onaylanmak, takdir edilmek.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Guruptaki arkadaşlarımın desteği.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Etkinlik, düzen ve disiplin.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 5">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Çalışma tarzınız hangisine uygundur?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 5">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Çalışma tarzınız hangisine uygundur?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">Yoğun ve hızlıyımdır. Aynı anda birkaç işi bir arada yapabilirim.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">Özgür bir ortamda çalışırım. İnsan ilişkileri odaklıyımdır.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Ön planda olmayan; ama gruba her türlü desteği veren bir yapım vardır.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Ayrıntıları önemserim ve tek bir konuya daklanarak çalışırım.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 6">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Çalışma temponuzu nasıl değerlendiriyorsunuz?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 6">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Çalışma temponuzu nasıl değerlendiriyorsunuz?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">Hızlı bir tempoda çalışır, çabuk karar almayı severim.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">İşlerin, rutin ve sıkıcı olmadığı ortamlarda yüksek motivasyonla çalışırım.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Nadiren aceleciyimdir. Geçde olsa üstlendiğim işi bitiririm.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Ayrıntılı düşünerek karar veririm. İş bitirici bir tempoyla çalışırım.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 7">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Hangisi sizi daha çok rahatsız eder?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 7">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Hangisi sizi daha çok rahatsız eder?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">Zaman israfı ve işlerin gecikmesi.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">Tekrar gerektiren işler ve monotonluk.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Çatışma ortamı ve anlaşmazlıklar</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Yanılmak ve yapılan hatanın tekrarlanması.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 8">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Bulunduğunuz gruplarda hangi konumda daha başarılı olursunuz?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 8">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Bulunduğunuz gruplarda hangi konumda daha başarılı olursunuz?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">Olaylara yön veren ve otoriteyi kullanan.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">İnsanları motive eden ve neşelendiren.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Uzlaştırıcı ve grup içindeki uyumu sağlayan.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Bilgi sağlayıcı, araştırıcı ve olayları takip eden.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 9">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Hangisi sizi daha çok strese sokar?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 9">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Hangisi sizi daha çok strese sokar?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">Olaylar üzerindeki güç ve kontrolümün azaldığını hissetmek.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">Sıkıcı, rutin işler yapılan bir ortamda bulunmak.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Beni aşacağını düşündüğüm sorumluluklar üstlenmek.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Düzensiz ortamlar ve eksik yapılan işler.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 10">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Bir öğrenci olsanız ve öğretmeniniz sınav kağıdınızı ikinci defa incelediğinde puanınızı artırdığını söylese,
-                nasıl bir tepki verirsiniz?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 10">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Bir öğrenci olsanız ve öğretmeniniz sınav kağıdınızı ikinci defa incelediğinde puanınızı artırdığını söylese,
+                  nasıl bir tepki verirsiniz?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">Bunu zaten hak ettiğimi düşünürüm.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">Çok sevinirim ve sevincimi belli ederim.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Hocama teşekkür eder ve saygı duyarım.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Hocamın nerede hata yaptığını merak eder, kağıdımı görmek isterim.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 11">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Saatler sürecek bir iş toplantısına katılmanız gerektiğinde aşağıdakilerden hangisini benimsersiniz?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 11">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Saatler sürecek bir iş toplantısına katılmanız gerektiğinde aşağıdakilerden hangisini benimsersiniz?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">Konunun ana hatlarının konuşulması için, sonucun belli olmasından hemen sonra çıkmayı tercih ederim.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">Toplantı eğlenceli bir şekilde devam ettiğinde sonuna kadar kalmayı, sıkıcı olmaya başladığında erken çıkmayı
-                     tercih ederim.</ion-checkbox>
+                    tercih ederim.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Toplantının huzur içinde geçmesi ve güzel kararlar çıkması için üstüme düşeni yaparım.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Toplantıya vaktinden önce gelir, tüm detayları not eder ve bir değerlendirme yapmak için geç çıkarım.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 12">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Kendinizde gördüğünüz en zayıf yönünüz hangisidir?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 12">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Kendinizde gördüğünüz en zayıf yönünüz hangisidir?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">İnsanlar işleri istediğim gibi yapmadığında ve seri olmadıklarında sinirlenmek.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">Düzensiz, dağınık ve programsız olmak.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Kimseye hayır diyememek ve başkalarının işine koşarken kendi işimi aksatmak.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Her şeyin kusursuz ve mükemmel olmasını istemek, insanlar buna uymadığında sinirlenmek.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 13">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Kendinizde gördüğünüz en güçlü yönünüz hangisidir?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 13">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Kendinizde gördüğünüz en güçlü yönünüz hangisidir?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">Kısa sürede karar alan ve harekete geçen yapım.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">Girdiğim ortamlara neşe ve heyecan katan tarafım.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Her türlü ortama uyum sağlama ve çatışmaları önleme gayretim.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Her şeyi planlı, programlı ve düzenli yapma huyum.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 14">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Aşağıdaki ifadelerden hangisi sizi daha iyi tanımlar?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 14">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Aşağıdaki ifadelerden hangisi sizi daha iyi tanımlar?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">Güçlü, kararlı, otoriter ve yönlendirici.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">Popüler, neşeli, sevimli ve muzip.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Barışçıl, sevecen, uyumlu ve sakin.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Tertipli, düzenli, disiplinli ve planlı.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 15">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Çalışma masanızda nelere dikkat edersiniz?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 15">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Çalışma masanızda nelere dikkat edersiniz?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">Öncelik verdiğim şeyleri yapacak şekilde düzenlenmiş sade bir masayı tercih ederim.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">İnsanlara karma karışık gelen; ama benim aradığım her şeyi bulduğum bir masada çalışırım.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Önce masamın üzerine gerekli olan her türlü araç gereci koyarım. Sık sık kalkarak enerjimi harcamak istemem.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">İyi bir iş çıkarmam için masam son derece derli-toplu ve düzenli olmalıdır.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ion-content>
-    </div>
-    <div ng-if="mv.q0 === 16">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                Soru {{mv.q0-1}}: Ertesi gün çözülmesi gereken bir problem varsa o akşamki ruh haliniz nasıl olur?
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 16">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Ertesi gün çözülmesi gereken bir problem varsa o akşamki ruh haliniz nasıl olur?
+                </div>
               </div>
-            </div>
-            <div class="center2">
-              <div>
+              <div class="center2">
+                <div>
                   <ion-checkbox ng-model="choice[0]">Çok büyük tedirginlik duymam; çünkü ertesi gün o işi olması gerektiği gibi yapacağımdan eminimdir.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">Çok tedirginlik duymam; çünkü nasıl olsa işler bir şekilde hallolacaktır.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Sorumluluğun üstümde olmasından dolayı tedirginlik duyarım.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Tedirginlik duyarım ve gecenin büyük bir bölümünde problemin nasıl çözüleceğiyle ilgili planlar yaparım.</ion-checkbox>
-                <br>
-                <button ng-click="mv.start()" class="button button-stable" align="center">
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
               Bir Sonraki
           </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 17">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  YEAAY! u r an idiot
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
       </ion-content>
     </div>
-    <div ng-if="mv.q0 === 17">
-      <ion-content class="bg">
-        <div class="row">
-          <div class="center1">
-            <div class="card">
-              <div class="item item-text-wrap item-divider">
-                YEAAY! u r an idiot
+    <div ng-if="mv.lang === 'EN'">
+      <div ng-if="mv.q0 === 1">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-divider item-dark">
+                  <center>
+                    <h1>
+                      <font color="white">Personal Test {{mv.q0}}</font>
+                    </h1>
+                  </center>
+                </div>
+                <div class="item item-text-wrap item-dark">
+                  Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
+                </div>
+                <div class="item item-divider item-dark">
+                  <p>
+                    <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
+                  </p>
+                </div>
+              </div>
+              <center>
+                <div>
+                  <button ng-click="mv.start()" class="button button-dark" align="center">
+              BAŞLA!
+          </button></center>
               </div>
             </div>
           </div>
-        </div>
-    </div>
-    </ion-content>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 2">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Aşağıdaki beyitlerden hangisi sizi daha iyi anlatır?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Güçlü, kararlı, girişken ve doğuştan liderim. Düşer kalkar, yoluma devam ederim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Hayata anlamlı renkler katar eğlenceyi severim. Ömür boyu herkesin mutlu ve neşeli olmasını dilerim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Her anımı huzurlu ve sakin geçirmek isterim. Kavga gürültü sevmem, işlerimde en kolay yolu seçerim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Her şeyin mükemmel, düzgün, kusursuz olmasını isterim. İlişkilerimde saygı ve mesafeli olmayı severim.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+                  Bir Sonraki
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 3">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Genellikle hangi tempoda ve nasıl konuşursunuz?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+
+                  <ion-checkbox ng-model="choice[0]">Hızlı ve sonuca yönelik.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Çok hızlı, heyecanlı ve eğlenceli.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Daha yavaş ve sakin.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Normal ve söyleyeceklerimi aklımda tartarak.</ion-checkbox>
+
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 4">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Bir işe motive olmanızı sağlayan en önemli unsur hangisidir?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Sonuçları düşünmek.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Onaylanmak, takdir edilmek.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Guruptaki arkadaşlarımın desteği.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Etkinlik, düzen ve disiplin.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 5">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Çalışma tarzınız hangisine uygundur?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Yoğun ve hızlıyımdır. Aynı anda birkaç işi bir arada yapabilirim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Özgür bir ortamda çalışırım. İnsan ilişkileri odaklıyımdır.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Ön planda olmayan; ama gruba her türlü desteği veren bir yapım vardır.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Ayrıntıları önemserim ve tek bir konuya daklanarak çalışırım.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 6">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Çalışma temponuzu nasıl değerlendiriyorsunuz?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Hızlı bir tempoda çalışır, çabuk karar almayı severim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">İşlerin, rutin ve sıkıcı olmadığı ortamlarda yüksek motivasyonla çalışırım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Nadiren aceleciyimdir. Geçde olsa üstlendiğim işi bitiririm.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Ayrıntılı düşünerek karar veririm. İş bitirici bir tempoyla çalışırım.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 7">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Hangisi sizi daha çok rahatsız eder?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Zaman israfı ve işlerin gecikmesi.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Tekrar gerektiren işler ve monotonluk.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Çatışma ortamı ve anlaşmazlıklar</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Yanılmak ve yapılan hatanın tekrarlanması.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 8">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Bulunduğunuz gruplarda hangi konumda daha başarılı olursunuz?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Olaylara yön veren ve otoriteyi kullanan.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">İnsanları motive eden ve neşelendiren.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Uzlaştırıcı ve grup içindeki uyumu sağlayan.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Bilgi sağlayıcı, araştırıcı ve olayları takip eden.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 9">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Hangisi sizi daha çok strese sokar?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Olaylar üzerindeki güç ve kontrolümün azaldığını hissetmek.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Sıkıcı, rutin işler yapılan bir ortamda bulunmak.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Beni aşacağını düşündüğüm sorumluluklar üstlenmek.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Düzensiz ortamlar ve eksik yapılan işler.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 10">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Bir öğrenci olsanız ve öğretmeniniz sınav kağıdınızı ikinci defa incelediğinde puanınızı artırdığını söylese,
+                  nasıl bir tepki verirsiniz?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Bunu zaten hak ettiğimi düşünürüm.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Çok sevinirim ve sevincimi belli ederim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Hocama teşekkür eder ve saygı duyarım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Hocamın nerede hata yaptığını merak eder, kağıdımı görmek isterim.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 11">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Saatler sürecek bir iş toplantısına katılmanız gerektiğinde aşağıdakilerden hangisini benimsersiniz?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Konunun ana hatlarının konuşulması için, sonucun belli olmasından hemen sonra çıkmayı tercih ederim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Toplantı eğlenceli bir şekilde devam ettiğinde sonuna kadar kalmayı, sıkıcı olmaya başladığında erken çıkmayı
+                    tercih ederim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Toplantının huzur içinde geçmesi ve güzel kararlar çıkması için üstüme düşeni yaparım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Toplantıya vaktinden önce gelir, tüm detayları not eder ve bir değerlendirme yapmak için geç çıkarım.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 12">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Kendinizde gördüğünüz en zayıf yönünüz hangisidir?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">İnsanlar işleri istediğim gibi yapmadığında ve seri olmadıklarında sinirlenmek.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Düzensiz, dağınık ve programsız olmak.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Kimseye hayır diyememek ve başkalarının işine koşarken kendi işimi aksatmak.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Her şeyin kusursuz ve mükemmel olmasını istemek, insanlar buna uymadığında sinirlenmek.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 13">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Kendinizde gördüğünüz en güçlü yönünüz hangisidir?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Kısa sürede karar alan ve harekete geçen yapım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Girdiğim ortamlara neşe ve heyecan katan tarafım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Her türlü ortama uyum sağlama ve çatışmaları önleme gayretim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Her şeyi planlı, programlı ve düzenli yapma huyum.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 14">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Aşağıdaki ifadelerden hangisi sizi daha iyi tanımlar?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Güçlü, kararlı, otoriter ve yönlendirici.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Popüler, neşeli, sevimli ve muzip.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Barışçıl, sevecen, uyumlu ve sakin.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Tertipli, düzenli, disiplinli ve planlı.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 15">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Çalışma masanızda nelere dikkat edersiniz?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Öncelik verdiğim şeyleri yapacak şekilde düzenlenmiş sade bir masayı tercih ederim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">İnsanlara karma karışık gelen; ama benim aradığım her şeyi bulduğum bir masada çalışırım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Önce masamın üzerine gerekli olan her türlü araç gereci koyarım. Sık sık kalkarak enerjimi harcamak istemem.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">İyi bir iş çıkarmam için masam son derece derli-toplu ve düzenli olmalıdır.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 16">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Soru {{mv.q0-1}}: Ertesi gün çözülmesi gereken bir problem varsa o akşamki ruh haliniz nasıl olur?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Çok büyük tedirginlik duymam; çünkü ertesi gün o işi olması gerektiği gibi yapacağımdan eminimdir.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Çok tedirginlik duymam; çünkü nasıl olsa işler bir şekilde hallolacaktır.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Sorumluluğun üstümde olmasından dolayı tedirginlik duyarım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Tedirginlik duyarım ve gecenin büyük bir bölümünde problemin nasıl çözüleceğiyle ilgili planlar yaparım.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Bir Sonraki
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 17">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  YEAAY! u r an idiot
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </ion-content>
     </div>
   </ion-view>
 </ion-nav-bar>
