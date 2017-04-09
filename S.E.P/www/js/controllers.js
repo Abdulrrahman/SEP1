@@ -220,7 +220,6 @@ angular.module('SimpleRESTIonic.controllers', [])
                 $timeout.cancel(mv.starttimeer);
                 mv.starttimeer = $timeout(timeout,50000);
                 $scope.choice = [false, false, false, false];
-                console.log(mv.presult);
                 $ionicViewSwitcher.nextDirection('forward');
                 $state.go($state.current, {}, { reload: true });
             }
@@ -229,7 +228,7 @@ angular.module('SimpleRESTIonic.controllers', [])
 
         mv.starttimeer = $timeout;
         mv.start = start;
-        mv.q0 = 16;
+        mv.q0 = 1;
         $scope.hi = "start";
         $scope.choice = [false, false, false, false];
         mv.result = [0, 0, 0, 0];
