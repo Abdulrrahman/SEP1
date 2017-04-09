@@ -4,7 +4,7 @@
       <button class="button button-balanced" ng-click="mv.changetoenglish()">EN</button>
       <button class="button button-balanced" ng-click="mv.changetoturkish()">TR</button>
     </ion-nav-buttons>
-    <div ng-if="mv.lang === 'TR'">
+    <div ng-if="mv.lang.tr">
       <div ng-if="mv.q0 === 1">
         <ion-content class="bg">
           <div class="row">
@@ -29,8 +29,8 @@
               <center>
                 <div>
                   <button ng-click="mv.start()" class="button button-dark" align="center">
-              BAŞLA!
-          </button></center>
+                    BAŞLA!
+                  </button></center>
               </div>
             </div>
           </div>
@@ -429,7 +429,7 @@
       </div>
       </ion-content>
     </div>
-    <div ng-if="mv.lang === 'EN'">
+    <div ng-if="mv.lang.en">
       <div ng-if="mv.q0 === 1">
         <ion-content class="bg">
           <div class="row">
@@ -461,7 +461,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 2">
+      <div ng-if="mv.q0 === 2 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -486,7 +486,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 3">
+      <div ng-if="mv.q0 === 3 && !mv.lang.tr ">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -513,7 +513,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 4">
+      <div ng-if="mv.q0 === 4 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -538,7 +538,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 5">
+      <div ng-if="mv.q0 === 5 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -563,7 +563,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 6">
+      <div ng-if="mv.q0 === 6 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -588,7 +588,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 7">
+      <div ng-if="mv.q0 === 7 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -613,7 +613,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 8">
+      <div ng-if="mv.q0 === 8 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -638,7 +638,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 9">
+      <div ng-if="mv.q0 === 9 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -663,7 +663,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 10">
+      <div ng-if="mv.q0 === 10 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -688,7 +688,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 11">
+      <div ng-if="mv.q0 === 11 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -713,7 +713,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 12">
+      <div ng-if="mv.q0 === 12 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -738,7 +738,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 13">
+      <div ng-if="mv.q0 === 13 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -763,7 +763,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 14">
+      <div ng-if="mv.q0 === 14 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -788,7 +788,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 15">
+      <div ng-if="mv.q0 === 15 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -813,7 +813,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 16">
+      <div ng-if="mv.q0 === 16 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">
@@ -838,7 +838,7 @@
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.q0 === 17">
+      <div ng-if="mv.q0 === 17 && !mv.lang.tr">
         <ion-content class="bg">
           <div class="row">
             <div class="center1">

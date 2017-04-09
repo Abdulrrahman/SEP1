@@ -145,11 +145,13 @@ angular.module('SimpleRESTIonic.controllers', [])
 
         function changetoenglish()
         {
-            mv.lang = "EN";
+            mv.lang.tr = false;
+            mv.lang.en = true;
         }
         function changetoturkish()
         {
-            mv.lang = "TR";
+            mv.lang.tr = true;
+            mv.lang.en = false;
         }
 
         function timeout() {
@@ -195,8 +197,9 @@ angular.module('SimpleRESTIonic.controllers', [])
                 $scope.hi = "Soru : " + mv.q0;
                 mv.q0 = mv.q0 + 1;
                 $timeout.cancel(mv.starttimeer);
-                mv.starttimeer = $timeout(timeout,5000);
+                mv.starttimeer = $timeout(timeout,50000);
                 $scope.choice = [false, false, false, false];
+                console.log(mv.lang);
                 $ionicViewSwitcher.nextDirection('forward');
                 $state.go($state.current, {}, { reload: true });
             }
@@ -209,7 +212,9 @@ angular.module('SimpleRESTIonic.controllers', [])
         $scope.hi = "start";
         $scope.choice = [false, false, false, false];
         mv.result = [0, 0, 0, 0];
-        mv.lang = "TR";
+        mv.lang = [{tr:true},{en:false}];
+        mv.lang.tr = true;
+        mv.lang.en = false;
         mv.changetoenglish = changetoenglish;
         mv.changetoturkish = changetoturkish;
 
