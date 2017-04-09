@@ -45,3 +45,7 @@
     margin-right: -5%;
     display: block;
 }
+
+.buttons-left {
+margin-top: 8px !important;
+}

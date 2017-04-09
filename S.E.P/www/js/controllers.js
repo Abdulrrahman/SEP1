@@ -142,9 +142,39 @@ angular.module('SimpleRESTIonic.controllers', [])
 
     .controller('MainCtrl', function (ItemsModel, $rootScope, $state, $scope, $ionicViewSwitcher, $ionicModal, $timeout) {
         var mv = this;
-        
-        function psuresualts()
-        {
+
+        function headlan() {
+            if (mv.lang.tr == true) {
+                if(mv.q0 == 1)
+                    return "baslangic";
+                if (mv.q0 == 17)
+                    return "test sonucu";
+                else
+                    return "Soru : " + (mv.q0 - 1);
+            }
+            else
+            {
+                if(mv.q0 == 1)
+                    return "start";
+                if (mv.q0 == 17)
+                    return "Your Personality Result(s)";
+                else
+                    return "quistion : " + (mv.q0 - 1);
+            }
+
+        }
+
+        function onTimeout() {
+            if (mv.count === 0) {
+                $timeout.cancel(mytimeout);
+                return;
+            }
+            mv.count--;
+            mytimeout = $timeout(onTimeout, 1000);
+        }
+
+
+        function psuresualts() {
             var res = mv.result[0];
             for (var i = 0; i < 4; i++) {
                 if (mv.result[i] > res) {
@@ -154,26 +184,29 @@ angular.module('SimpleRESTIonic.controllers', [])
             for (var i = 0; i < 4; i++) {
                 if (mv.result[i] == res) {
                     mv.presults.push(mv.presult[i]);
+                    mv.epresults.push(mv.epresult[i]);
                 }
             }
         }
 
-        function changetoenglish()
-        {
+        function changetoenglish() {
             mv.lang.tr = false;
             mv.lang.en = true;
+            $scope.hi = headlan();
         }
-        function changetoturkish()
-        {
+        function changetoturkish() {
             mv.lang.tr = true;
             mv.lang.en = false;
+            $scope.hi = headlan();
         }
 
         function timeout() {
+            $timeout.cancel(mytimeout);
             mv.q0 = 1;
-            $scope.hi = "start";
             $scope.choice = [false, false, false, false];
             mv.result = [0, 0, 0, 0];
+            mv.count = 45;
+            $scope.hi = headlan();
             $ionicViewSwitcher.nextDirection('back');
             $state.go($state.current, {}, { reload: true });
         }
@@ -209,40 +242,47 @@ angular.module('SimpleRESTIonic.controllers', [])
             else {
                 if (mv.q0 != 1)
                     calc();
-                if(mv.q0 == 16)
-                {
-                    $scope.hi = "Your Personality Result(s)";
+                if (mv.q0 == 16) {
                     psuresualts();
+                    $timeout.cancel(mv.starttimeer);
+                    $timeout.cancel(mytimeout);
                 }
-                else
-                {
-                    $scope.hi = "Soru : " + mv.q0;
+                else {
+                    $timeout.cancel(mv.starttimeer);
+                    $timeout.cancel(mytimeout);
+                    mv.starttimeer = $timeout(timeout, 45000);
+                    mytimeout = $timeout(onTimeout, 1000);
                 }
+                mv.count = 45;
                 mv.q0 = mv.q0 + 1;
-                $timeout.cancel(mv.starttimeer);
-                mv.starttimeer = $timeout(timeout,50000);
+                $scope.hi = headlan();
                 $scope.choice = [false, false, false, false];
                 $ionicViewSwitcher.nextDirection('forward');
                 $state.go($state.current, {}, { reload: true });
             }
 
         }
-
+        mv.count = 45;
+        mytimeout = $timeout;
         mv.starttimeer = $timeout;
         mv.start = start;
         mv.q0 = 1;
-        $scope.hi = "start";
         $scope.choice = [false, false, false, false];
         mv.result = [0, 0, 0, 0];
-        mv.lang = [{tr:true},{en:false}];
+        mv.lang = [{ tr: true }, { en: false }];
         mv.lang.tr = true;
         mv.lang.en = false;
+        $scope.hi = headlan();
         mv.changetoenglish = changetoenglish;
         mv.changetoturkish = changetoturkish;
         mv.presult = [
-            {src:"/img/a.png"},{src:"/img/b.png"},{src:"/img/c.png"},{src:"/img/d.png"}
+            { src: "/img/a.png" }, { src: "/img/b.png" }, { src: "/img/c.png" }, { src: "/img/d.png" }
         ];
         mv.presults = [];
+        mv.epresult = [
+            { src: "/img/ae.png" }, { src: "/img/be.png" }, { src: "/img/ce.png" }, { src: "/img/de.png" }
+        ];
+        mv.epresults = [];
 
         $scope.sw1 = function (data) {
             $scope.modal1.show();

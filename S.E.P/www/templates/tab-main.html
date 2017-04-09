@@ -1,5 +1,10 @@
 <ion-nav-bar class="bar-dark">
   <ion-view view-title="{{hi}}">
+    <ion-nav-buttons side="left">
+      <font color="FF8000" size="5px">&nbspTime Left :&nbsp</font>
+      <font ng-if="mv.count > 10" color="Yellow" size="6px">{{mv.count}}</font>
+      <font ng-if="mv.count < 11" color="Red" size="6px">{{mv.count}}</font>
+    </ion-nav-buttons>
     <ion-nav-buttons side="right">
       <button class="button button-balanced" ng-click="mv.changetoenglish()">EN</button>
       <button class="button button-balanced" ng-click="mv.changetoturkish()">TR</button>
@@ -671,8 +676,8 @@
             <div class="center1">
               <div class="card">
                 <div class="item item-text-wrap item-divider">
-                  Question {{mv.q0-1}}: Assume you're a student and your teacher comes to you and says he/she had <br> increased your grade upon
-                  reexamining your exam paper. What would your reaction be?
+                  Question {{mv.q0-1}}: Assume you're a student and your teacher comes to you and says he/she had <br> increased
+                  your grade upon reexamining your exam paper. What would your reaction be?
                 </div>
               </div>
               <div class="center2">
@@ -778,7 +783,7 @@
               </div>
               <div class="center2">
                 <div>
-                  <ion-checkbox ng-model="choice[0]">Powerful, decisive, leader and  ve director.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[0]">Powerful, decisive, leader and ve director.</ion-checkbox>
                   <ion-checkbox ng-model="choice[1]">Popular, cheerful, cute and farceur.</ion-checkbox>
                   <ion-checkbox ng-model="choice[2]">Peace-loving, affectionate, agreeable and calm.</ion-checkbox>
                   <ion-checkbox ng-model="choice[3]">Tidy, self disciplined.</ion-checkbox>
@@ -845,16 +850,13 @@
       <div ng-if="mv.q0 === 17 && mv.lang.en">
         <ion-content class="bg">
           <div class="row">
-            <div class="center1">
-              <div class="card">
-                <div class="item item-text-wrap item-divider">
-                  YEAAY! u r an idiot
-                </div>
+            <div class="center">
+              <div ng-repeat="item in mv.epresults">
+                <img src="{{item.src}}">
               </div>
             </div>
           </div>
+        </ion-content>
       </div>
-      </ion-content>
-    </div>
   </ion-view>
 </ion-nav-bar>
