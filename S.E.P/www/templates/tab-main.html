@@ -438,12 +438,12 @@
                 <div class="item item-divider item-dark">
                   <center>
                     <h1>
-                      <font color="white">Personal Test {{mv.q0}}</font>
+                      <font color="white">Personality Test</font>
                     </h1>
                   </center>
                 </div>
                 <div class="item item-text-wrap item-dark">
-                  Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
+                  You must answer all questions before the timer reaches 0!
                 </div>
                 <div class="item item-divider item-dark">
                   <p>
@@ -454,7 +454,7 @@
               <center>
                 <div>
                   <button ng-click="mv.start()" class="button button-dark" align="center">
-              BAŞLA!
+              Start!
           </button></center>
               </div>
             </div>
@@ -467,18 +467,18 @@
             <div class="center1">
               <div class="card">
                 <div class="item item-text-wrap item-divider">
-                  Soru {{mv.q0-1}}: Aşağıdaki beyitlerden hangisi sizi daha iyi anlatır?
+                  Question {{mv.q0-1}}: Which of the following describes you better?
                 </div>
               </div>
               <div class="center2">
                 <div>
-                  <ion-checkbox ng-model="choice[0]">Güçlü, kararlı, girişken ve doğuştan liderim. Düşer kalkar, yoluma devam ederim.</ion-checkbox>
-                  <ion-checkbox ng-model="choice[1]">Hayata anlamlı renkler katar eğlenceyi severim. Ömür boyu herkesin mutlu ve neşeli olmasını dilerim.</ion-checkbox>
-                  <ion-checkbox ng-model="choice[2]">Her anımı huzurlu ve sakin geçirmek isterim. Kavga gürültü sevmem, işlerimde en kolay yolu seçerim.</ion-checkbox>
-                  <ion-checkbox ng-model="choice[3]">Her şeyin mükemmel, düzgün, kusursuz olmasını isterim. İlişkilerimde saygı ve mesafeli olmayı severim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[0]">I'm strong, decisive and sociable. I was born a leader. I wouldn't let anything get between me and my goals.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">I have a colorful spirit. I'm cheerful and I like having fun. And I wish the same joy for everyone around me.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">I dont like violence. I prefer a quiet and peaceful life. I always pick the safest and easiest path.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">I'm a perfectionist. Everything has to be percise and accurate. And I prefer being respectful and a bit distant with others.</ion-checkbox>
                   <br>
                   <button ng-click="mv.start()" class="button button-stable" align="center">
-                  Bir Sonraki
+                  Next Question
                 </button>
                 </div>
               </div>
