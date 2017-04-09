@@ -418,442 +418,443 @@
       <div ng-if="mv.q0 === 17">
         <ion-content class="bg">
           <div class="row">
-            <div class="center" >
+            <div class="center">
               <div ng-repeat="item in mv.presults">
-                <img  src="{{item.src}}">
+                <img src="{{item.src}}">
               </div>
             </div>
           </div>
         </ion-content>
       </div>
-      <div ng-if="mv.lang.en">
-        <div ng-if="mv.q0 === 1">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-divider item-dark">
-                    <center>
-                      <h1>
-                        <font color="white">Personality Test</font>
-                      </h1>
-                    </center>
-                  </div>
-                  <div class="item item-text-wrap item-dark">
-                    You must answer all questions before the timer reaches 0!
-                  </div>
-                  <div class="item item-divider item-dark">
-                    <p>
-                      <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
-                    </p>
-                  </div>
+    </div>
+    <div ng-if="mv.lang.en">
+      <div ng-if="mv.q0 === 1">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-divider item-dark">
+                  <center>
+                    <h1>
+                      <font color="white">Personality Test</font>
+                    </h1>
+                  </center>
                 </div>
-                <center>
-                  <div>
-                    <button ng-click="mv.start()" class="button button-dark" align="center">
+                <div class="item item-text-wrap item-dark">
+                  You must answer all questions before the timer reaches 0!
+                </div>
+                <div class="item item-divider item-dark">
+                  <p>
+                    <font color="white">Renda Yiğit, Abdurrahman Joukhadar, Esma Çorbacı</font>
+                  </p>
+                </div>
+              </div>
+              <center>
+                <div>
+                  <button ng-click="mv.start()" class="button button-dark" align="center">
               Start!
           </button></center>
-                </div>
               </div>
             </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 2 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: Which of the following describes you better?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">I'm strong, decisive and sociable. I was born a leader. I wouldn't let anything get between me and my
-                      goals.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">I have a colorful spirit. I'm cheerful and I like having fun. And I wish the same joy for everyone around
-                      me.
-                    </ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">I dont like violence. I prefer a quiet and peaceful life. I always pick the safest and easiest path.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">I'm a perfectionist. Everything has to be percise and accurate. And I prefer being respectful and a bit
-                      distant with others.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-                  Next Question
-                </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 3 && !mv.lang.tr ">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: At what pace do you usually speak?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-
-                    <ion-checkbox ng-model="choice[0]">Fast and conclusive.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">Very fast, always excitedly and fun.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">Slow and calm.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">Normal pace while I plan my speach beforehand.</ion-checkbox>
-
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 4 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: What motivates you most to perform a certain task?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">The thought of the results.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">To be appreciated.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">The support of my colleagues.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">Activity, order and discipline.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 5 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: How do you usually perform tasks?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">I'm usually busy and fast. I can multitask.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">I like working in open and public areas. I focus on human relations.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">I'm never the center of attention but I support the team.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">I mind the details. I complete tasks one at a time.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 6 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: At what pace do you usually work?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">A fast pace. I'm a lightning-fast decision maker.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">I'm highly motived when the job is not routine and boring.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">I rarly rush a task. I always complete the job regardless of the due date.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">I plan carefully before I decide. I complete all the tasks.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 7 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: Which of the following bothers you more?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">Waste of time and any means of delay.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">Repetitive and monotone tasks.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">Work environment and disagreements.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">To be wrong and repeating the same mistakes.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 8 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: At which positions would you be more successful?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">A leading position. To be in Authority.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">A position where you motivate and cheer your colleagues.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">A mediator and peacemaker position.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">A researcher position. Being the 'brains' of the team.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 9 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: Which of the following stresses you out more?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">The thought or feeling of loosing power and control.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">To be present in boring and routine environments.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">Overwhelming Responsibilities</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">Untidy environments and deficient work.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 10 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: Assume you're a student and your teacher comes to you and says he/she had increased your grade upon
-                    reexamining your exam paper. What would your reaction be?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">I would think I already deserved it.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">I would cheer up and express my gratitude.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">I would thank and repect my teacher.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">I would be curious where the teacher had made a mistake and would want to see my paper.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 11 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: What would your actions be upon learning you are going to be attending a very long meeting?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">I would leave the meeting the very moment the basline was covered.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">I would attend all the way to end as long the meeting was fun otherwise I'd leave early.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">I'd do my best to keep the meeting fun and exciting.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">I'd attend the meeting ahead of time, take note of all the details and stay late in order to make assessments
-                      and evaluations.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 12 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: Kendinizde gördüğünüz en zayıf yönünüz hangisidir?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">İnsanlar işleri istediğim gibi yapmadığında ve seri olmadıklarında sinirlenmek.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">Düzensiz, dağınık ve programsız olmak.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">Kimseye hayır diyememek ve başkalarının işine koşarken kendi işimi aksatmak.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">Her şeyin kusursuz ve mükemmel olmasını istemek, insanlar buna uymadığında sinirlenmek.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 13 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: Kendinizde gördüğünüz en güçlü yönünüz hangisidir?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">Kısa sürede karar alan ve harekete geçen yapım.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">Girdiğim ortamlara neşe ve heyecan katan tarafım.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">Her türlü ortama uyum sağlama ve çatışmaları önleme gayretim.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">Her şeyi planlı, programlı ve düzenli yapma huyum.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 14 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: Aşağıdaki ifadelerden hangisi sizi daha iyi tanımlar?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">Güçlü, kararlı, otoriter ve yönlendirici.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">Popüler, neşeli, sevimli ve muzip.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">Barışçıl, sevecen, uyumlu ve sakin.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">Tertipli, düzenli, disiplinli ve planlı.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 15 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: Çalışma masanızda nelere dikkat edersiniz?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">Öncelik verdiğim şeyleri yapacak şekilde düzenlenmiş sade bir masayı tercih ederim.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">İnsanlara karma karışık gelen; ama benim aradığım her şeyi bulduğum bir masada çalışırım.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">Önce masamın üzerine gerekli olan her türlü araç gereci koyarım. Sık sık kalkarak enerjimi harcamak istemem.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">İyi bir iş çıkarmam için masam son derece derli-toplu ve düzenli olmalıdır.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 16 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    Question {{mv.q0-1}}: Ertesi gün çözülmesi gereken bir problem varsa o akşamki ruh haliniz nasıl olur?
-                  </div>
-                </div>
-                <div class="center2">
-                  <div>
-                    <ion-checkbox ng-model="choice[0]">Çok büyük tedirginlik duymam; çünkü ertesi gün o işi olması gerektiği gibi yapacağımdan eminimdir.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[1]">Çok tedirginlik duymam; çünkü nasıl olsa işler bir şekilde hallolacaktır.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[2]">Sorumluluğun üstümde olmasından dolayı tedirginlik duyarım.</ion-checkbox>
-                    <ion-checkbox ng-model="choice[3]">Tedirginlik duyarım ve gecenin büyük bir bölümünde problemin nasıl çözüleceğiyle ilgili planlar yaparım.</ion-checkbox>
-                    <br>
-                    <button ng-click="mv.start()" class="button button-stable" align="center">
-              Next Question
-          </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ion-content>
-        </div>
-        <div ng-if="mv.q0 === 17 && !mv.lang.tr">
-          <ion-content class="bg">
-            <div class="row">
-              <div class="center1">
-                <div class="card">
-                  <div class="item item-text-wrap item-divider">
-                    YEAAY! u r an idiot
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
+          </div>
         </ion-content>
       </div>
+      <div ng-if="mv.q0 === 2 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: Which of the following describes you better?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">I'm strong, decisive and sociable. I was born a leader. I wouldn't let anything get between me and my goals.
+                  </ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">I have a colorful spirit. I'm cheerful and I like having fun. And I wish the same joy for everyone around
+                    me.
+                  </ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">I dont like violence. I prefer a quiet and peaceful life. I always pick the safest and easiest path.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">I'm a perfectionist. Everything has to be percise and accurate. And I prefer being respectful and a bit
+                    distant with others.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+                  Next Question
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 3 && mv.lang.en ">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: At what pace do you usually speak?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+
+                  <ion-checkbox ng-model="choice[0]">Fast and conclusive.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Very fast, always excitedly and fun.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Slow and calm.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Normal pace while I plan my speach beforehand.</ion-checkbox>
+
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 4 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: What motivates you most to perform a certain task?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">The thought of the results.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">To be appreciated.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">The support of my colleagues.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Activity, order and discipline.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 5 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: How do you usually perform tasks?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">I'm usually busy and fast. I can multitask.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">I like working in open and public areas. I focus on human relations.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">I'm never the center of attention but I support the team.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">I mind the details. I complete tasks one at a time.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 6 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: At what pace do you usually work?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">A fast pace. I'm a lightning-fast decision maker.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">I'm highly motived when the job is not routine and boring.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">I rarly rush a task. I always complete the job regardless of the due date.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">I plan carefully before I decide. I complete all the tasks.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 7 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: Which of the following bothers you more?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Waste of time and any means of delay.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Repetitive and monotone tasks.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Work environment and disagreements.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">To be wrong and repeating the same mistakes.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 8 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: At which positions would you be more successful?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">A leading position. To be in Authority.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">A position where you motivate and cheer your colleagues.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">A mediator and peacemaker position.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">A researcher position. Being the 'brains' of the team.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 9 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: Which of the following stresses you out more?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">The thought or feeling of loosing power and control.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">To be present in boring and routine environments.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Overwhelming Responsibilities</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Untidy environments and deficient work.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 10 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: Assume you're a student and your teacher comes to you and says he/she had increased your grade upon
+                  reexamining your exam paper. What would your reaction be?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">I would think I already deserved it.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">I would cheer up and express my gratitude.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">I would thank and repect my teacher.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">I would be curious where the teacher had made a mistake and would want to see my paper.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 11 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: What would your actions be upon learning you are going to be attending a very long meeting?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">I would leave the meeting the very moment the basline was covered.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">I would attend all the way to end as long the meeting was fun otherwise I'd leave early.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">I'd do my best to keep the meeting fun and exciting.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">I'd attend the meeting ahead of time, take note of all the details and stay late in order to make assessments
+                    and evaluations.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 12 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: Kendinizde gördüğünüz en zayıf yönünüz hangisidir?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">İnsanlar işleri istediğim gibi yapmadığında ve seri olmadıklarında sinirlenmek.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Düzensiz, dağınık ve programsız olmak.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Kimseye hayır diyememek ve başkalarının işine koşarken kendi işimi aksatmak.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Her şeyin kusursuz ve mükemmel olmasını istemek, insanlar buna uymadığında sinirlenmek.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 13 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: Kendinizde gördüğünüz en güçlü yönünüz hangisidir?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Kısa sürede karar alan ve harekete geçen yapım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Girdiğim ortamlara neşe ve heyecan katan tarafım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Her türlü ortama uyum sağlama ve çatışmaları önleme gayretim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Her şeyi planlı, programlı ve düzenli yapma huyum.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 14 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: Aşağıdaki ifadelerden hangisi sizi daha iyi tanımlar?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Güçlü, kararlı, otoriter ve yönlendirici.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Popüler, neşeli, sevimli ve muzip.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Barışçıl, sevecen, uyumlu ve sakin.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Tertipli, düzenli, disiplinli ve planlı.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 15 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: Çalışma masanızda nelere dikkat edersiniz?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Öncelik verdiğim şeyleri yapacak şekilde düzenlenmiş sade bir masayı tercih ederim.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">İnsanlara karma karışık gelen; ama benim aradığım her şeyi bulduğum bir masada çalışırım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Önce masamın üzerine gerekli olan her türlü araç gereci koyarım. Sık sık kalkarak enerjimi harcamak istemem.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">İyi bir iş çıkarmam için masam son derece derli-toplu ve düzenli olmalıdır.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 16 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  Question {{mv.q0-1}}: Ertesi gün çözülmesi gereken bir problem varsa o akşamki ruh haliniz nasıl olur?
+                </div>
+              </div>
+              <div class="center2">
+                <div>
+                  <ion-checkbox ng-model="choice[0]">Çok büyük tedirginlik duymam; çünkü ertesi gün o işi olması gerektiği gibi yapacağımdan eminimdir.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[1]">Çok tedirginlik duymam; çünkü nasıl olsa işler bir şekilde hallolacaktır.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[2]">Sorumluluğun üstümde olmasından dolayı tedirginlik duyarım.</ion-checkbox>
+                  <ion-checkbox ng-model="choice[3]">Tedirginlik duyarım ve gecenin büyük bir bölümünde problemin nasıl çözüleceğiyle ilgili planlar yaparım.</ion-checkbox>
+                  <br>
+                  <button ng-click="mv.start()" class="button button-stable" align="center">
+              Next Question
+          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+      <div ng-if="mv.q0 === 17 && mv.lang.en">
+        <ion-content class="bg">
+          <div class="row">
+            <div class="center1">
+              <div class="card">
+                <div class="item item-text-wrap item-divider">
+                  YEAAY! u r an idiot
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </ion-content>
+    </div>
   </ion-view>
 </ion-nav-bar>

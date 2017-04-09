@@ -215,7 +215,9 @@ angular.module('SimpleRESTIonic.controllers', [])
                     psuresualts();
                 }
                 else
+                {
                     $scope.hi = "Soru : " + mv.q0;
+                }
                 mv.q0 = mv.q0 + 1;
                 $timeout.cancel(mv.starttimeer);
                 mv.starttimeer = $timeout(timeout,50000);
@@ -238,12 +240,11 @@ angular.module('SimpleRESTIonic.controllers', [])
         mv.changetoenglish = changetoenglish;
         mv.changetoturkish = changetoturkish;
         mv.presult = [
-            {src:"../img/a.png"},{src:"../img/b.png"},{src:"../img/d.png"},{src:"../img/c.png"}
+            {src:"/img/a.png"},{src:"/img/b.png"},{src:"/img/c.png"},{src:"/img/d.png"}
         ];
         mv.presults = [];
 
         $scope.sw1 = function (data) {
-            //console.log(data);
             $scope.modal1.show();
             $timeout(function () {
                 $scope.closesw1();
