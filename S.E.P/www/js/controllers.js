@@ -142,6 +142,21 @@ angular.module('SimpleRESTIonic.controllers', [])
 
     .controller('MainCtrl', function (ItemsModel, $rootScope, $state, $scope, $ionicViewSwitcher, $ionicModal, $timeout) {
         var mv = this;
+        
+        function psuresualts()
+        {
+            var res = mv.result[0];
+            for (var i = 0; i < 4; i++) {
+                if (mv.result[i] > res) {
+                    res = mv.result[i];
+                }
+            }
+            for (var i = 0; i < 4; i++) {
+                if (mv.result[i] == res) {
+                    mv.presults.push(mv.presult[i]);
+                }
+            }
+        }
 
         function changetoenglish()
         {
@@ -194,12 +209,18 @@ angular.module('SimpleRESTIonic.controllers', [])
             else {
                 if (mv.q0 != 1)
                     calc();
-                $scope.hi = "Soru : " + mv.q0;
+                if(mv.q0 == 16)
+                {
+                    $scope.hi = "Your Personality Result(s)";
+                    psuresualts();
+                }
+                else
+                    $scope.hi = "Soru : " + mv.q0;
                 mv.q0 = mv.q0 + 1;
                 $timeout.cancel(mv.starttimeer);
                 mv.starttimeer = $timeout(timeout,50000);
                 $scope.choice = [false, false, false, false];
-                console.log(mv.lang);
+                console.log(mv.presult);
                 $ionicViewSwitcher.nextDirection('forward');
                 $state.go($state.current, {}, { reload: true });
             }
@@ -208,7 +229,7 @@ angular.module('SimpleRESTIonic.controllers', [])
 
         mv.starttimeer = $timeout;
         mv.start = start;
-        mv.q0 = 1;
+        mv.q0 = 16;
         $scope.hi = "start";
         $scope.choice = [false, false, false, false];
         mv.result = [0, 0, 0, 0];
@@ -217,6 +238,10 @@ angular.module('SimpleRESTIonic.controllers', [])
         mv.lang.en = false;
         mv.changetoenglish = changetoenglish;
         mv.changetoturkish = changetoturkish;
+        mv.presult = [
+            {src:"../img/a.png"},{src:"../img/b.png"},{src:"../img/d.png"},{src:"../img/c.png"}
+        ];
+        mv.presults = [];
 
         $scope.sw1 = function (data) {
             //console.log(data);
