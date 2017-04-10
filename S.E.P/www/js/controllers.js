@@ -159,7 +159,7 @@ angular.module('SimpleRESTIonic.controllers', [])
                 if (mv.q0 == 17)
                     return "Your Personality Result(s)";
                 else
-                    return "quistion : " + (mv.q0 - 1);
+                    return "Question : " + (mv.q0 - 1);
             }
 
         }
