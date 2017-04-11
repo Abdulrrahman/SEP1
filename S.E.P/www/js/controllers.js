@@ -146,7 +146,7 @@ angular.module('SimpleRESTIonic.controllers', [])
         function headlan() {
             if (mv.lang.tr == true) {
                 if(mv.q0 == 1)
-                    return "baslangic";
+                    return "Kişilik Testi";
                 if (mv.q0 == 17)
                     return "test sonucu";
                 else
@@ -155,7 +155,7 @@ angular.module('SimpleRESTIonic.controllers', [])
             else
             {
                 if(mv.q0 == 1)
-                    return "start";
+                    return "Personality Test";
                 if (mv.q0 == 17)
                     return "Your Personality Result(s)";
                 else
@@ -300,4 +300,3 @@ angular.module('SimpleRESTIonic.controllers', [])
             $scope.modal1.hide();
         };
     });
-
