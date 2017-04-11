@@ -1,27 +1,36 @@
 <ion-modal-view>
+  <div ng-if="mv.lang.tr" style="font-size: 150%" >
   <ion-header-bar>
-    <h1 class="title">User Manual</h1>
+    <h1 class="title">Kurallar</h1>
     <div class="buttons">
       <!-- if needed add close poopout button -->
       <button class="button button-clear button-assertive" ng-click="closesw1()">Close</button>
     </div>
   </ion-header-bar>
-  <div ng-if="mv.lang.tr">
     <ion-content>
-      <br> &nbsp 1 - You can only select 1 or 2 answers at the sametime :<br> &nbsp &nbsp &nbsp a - If you Select
-      only one answer you got 2 point as you selected twice<br> &nbsp &nbsp &nbsp b - If you Select two answers you got 1
-      point<br><br> &nbsp 2 - You should answer evry question within the requisted time (45.S) or you will have to repeat
-      the exam again :<br> &nbsp &nbsp &nbsp a - You can see the time on the Right side<br><br> &nbsp 3 - You can continue
-      by clicking on close button on the top-right side : <br> &nbsp &nbsp &nbsp a - this window going to be closed after
-      (20.S) <br>
+      <br> &nbsp 1 - Her soru için eğer sizin için daha uygun olacağını düşünüyorsanız iki cevap<br>
+       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp seçebilirsiniz; fakat daha fazla seçemessiniz. <br>
+      <br> &nbsp 2 - Her soruyu 45 saniye içinde cevaplamak zorundasınız. Bu kısıt soruları <br>
+       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp dürüstce cevaplamanız için konulmuştur. Sayaç ekranınızın sol üst  <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp köşesinde bulunmaktadır. <br>
+      <br> &nbsp 3 - Bu pencereyi kapatmak için sağ üstteki kapat tuşuna tıklayınız. Bu pencere <br>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 20 saniye sonra kendiliğinden kapanacaktır.<br>
     </ion-content>
   </div>
-  <div ng-if="mv.lang.en">
-  <ion-content>
-    <br> &nbsp 1 - 2You can only select 1 or 2 answers at the sametime :<br> &nbsp &nbsp &nbsp a - If you Select
-    only one answer you got 2 point as you selected twice<br> &nbsp &nbsp &nbsp b - If you Select two answers you got 1 point<br><br>    &nbsp 2 - You should answer evry question within the requisted time (45.S) or you will have to repeat the exam again
-    :<br> &nbsp &nbsp &nbsp a - You can see the time on the Right side<br><br> &nbsp 3 - You can continue by clicking on
-    close button on the top-right side : <br> &nbsp &nbsp &nbsp a - this window going to be closed after (20.S) <br>
-  </ion-content>
+  <div ng-if="mv.lang.en" style="font-size: 150%" >
+  <ion-header-bar>
+    <h1 class="title">Rules</h1>
+    <div class="buttons">
+      <!-- if needed add close poopout button -->
+      <button class="button button-clear button-assertive" ng-click="closesw1()">Close</button>
+    </div>
+  </ion-header-bar>
+    <ion-content>
+      <br> &nbsp 1 - You can select 2 answers in each question if you see that to be more fit;<br>
+       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp but not more. <br>
+      <br> &nbsp 2 - You are to answer every question within 45 seconds each. This limitation is <br>
+       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp to ensure you answer the questions truthfuly. The timer is located on the 		  <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp top-left side of your screen. <br>
+      <br> &nbsp 3 - Please continue by clicking on close button on the top-right side. Also note <br>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspthat this window will disappear in 20 seconds.<br>
+    </ion-content>
   </div>
 </ion-modal-view>
