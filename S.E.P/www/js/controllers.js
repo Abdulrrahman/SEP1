@@ -266,7 +266,7 @@ angular.module('SimpleRESTIonic.controllers', [])
         mytimeout = $timeout;
         mv.starttimeer = $timeout;
         mv.start = start;
-        mv.q0 = 1;
+        mv.q0 = 16;
         $scope.choice = [false, false, false, false];
         mv.result = [0, 0, 0, 0];
         mv.lang = [{ tr: true }, { en: false }];
