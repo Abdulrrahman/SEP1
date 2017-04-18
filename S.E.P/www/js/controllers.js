@@ -181,10 +181,14 @@ angular.module('SimpleRESTIonic.controllers', [])
                     res = mv.result[i];
                 }
             }
+            var ar = ['A','B','C','D'];
             for (var i = 0; i < 4; i++) {
                 if (mv.result[i] == res) {
                     mv.presults.push(mv.presult[i]);
                     mv.epresults.push(mv.epresult[i]);
+                    ItemsModel.do(1,ar[i]).then(function(result){
+                        ItemsModel.update(1,result);
+                    });
                 }
             }
         }
