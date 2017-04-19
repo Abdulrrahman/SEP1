@@ -1,7 +1,9 @@
 <ion-nav-bar class="bar-dark">
   <ion-view view-title="{{hi}}">
     <ion-nav-buttons side="left">
-      <font color="white" size="5px">&nbsp⏰&nbsp</font>
+      <div ng-click="sws()">
+        <font color="white" size="5px">&nbsp⏰&nbsp</font>
+      </div>
       <font ng-if="mv.count > 10" color="00FF00" size="6px">{{mv.count}}</font>
       <font ng-if="mv.count < 11" color="Red" size="6px">{{mv.count}}</font>
     </ion-nav-buttons>
@@ -23,7 +25,7 @@
                   </center>
                 </div>
                 <div class="item item-text-wrap item-dark">
-                  Süre dolmadan tüm sorulara cevap vermeniz gerekmektedir!
+                  15 sorun var her soru icin 45 saniye var oyalanmadan cevapla ! .
                 </div>
                 <div class="item item-divider item-dark">
                   <p>
@@ -35,7 +37,8 @@
                 <div>
                   <button ng-click="mv.start()" class="button button-dark" align="center">
                     BAŞLA!
-                  </button></center>
+                  </button>
+              </center>
               </div>
             </div>
           </div>

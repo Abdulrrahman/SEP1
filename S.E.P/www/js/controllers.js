@@ -288,6 +288,11 @@ angular.module('SimpleRESTIonic.controllers', [])
         ];
         mv.epresults = [];
 
+        $scope.labels = ["A : Red", "B : Yellow", "C : Green","D : Blue"];
+        $scope.data = [1,1,1,1];
+        $scope.colours = ['#ff0000', '#ffff00', '#66ff33', '#0066ff'];
+
+
         $scope.sw1 = function (data) {
             $scope.modal1.show();
             $timeout(function () {
@@ -302,5 +307,42 @@ angular.module('SimpleRESTIonic.controllers', [])
 
         $scope.closesw1 = function () {
             $scope.modal1.hide();
+        };
+        
+        function sws()
+        {
+            if(!fsclick)
+            {
+                fsclick = true;
+            }
+            else
+            {
+                fsclick = false;
+                $scope.sw2();
+            }
+        }
+        var fsclick = false;
+        $scope.sws = sws;
+        
+        $scope.sw2 = function (data) {
+            ItemsModel.fetch(1).then(function(result){
+                $scope.data[0]=result.data.A;
+                $scope.data[1]=result.data.B;
+                $scope.data[2]=result.data.C;
+                $scope.data[3]=result.data.D;
+            });
+            $scope.modal2.show();
+            $timeout(function () {
+                $scope.closesw2();
+            }, 50000);
+        };
+        $ionicModal.fromTemplateUrl('templates/subtemplates/sub2.html', {
+            scope: $scope
+        }).then(function (modal) {
+            $scope.modal2 = modal;
+        });
+
+        $scope.closesw2 = function () {
+            $scope.modal2.hide();
         };
     });

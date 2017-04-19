@@ -1,0 +1,15 @@
+<ion-modal-view>
+        <ion-header-bar class="bar-dark">
+            <h1 class="title">Statistics</h1>
+            <div class="buttons">
+                <!-- if needed add close poopout button -->
+                <button class="button button-clear button-assertive" ng-click="closesw2()">Close</button>
+            </div>
+        </ion-header-bar>
+        <ion-content>
+            <div class="center" style="height: 40%;width: 40%;">
+                <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-colors="colours">
+                </canvas>
+            </div>
+        </ion-content>
+</ion-modal-view>
