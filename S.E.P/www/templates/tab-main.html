@@ -1,7 +1,7 @@
 <ion-nav-bar class="bar-dark">
   <ion-view view-title="{{hi}}">
     <ion-nav-buttons side="left">
-      <div ng-click="sws()">
+      <div>
         <font color="white" size="5px">&nbsp⏰&nbsp</font>
       </div>
       <font ng-if="mv.count > 10" color="00FF00" size="6px">{{mv.count}}</font>
@@ -25,7 +25,7 @@
                   </center>
                 </div>
                 <div class="item item-text-wrap item-dark">
-                  15 sorun var her soru icin 45 saniye var oyalanmadan cevapla ! .
+                  <center>15 sorun var her soru icin 45 saniye <br> var oyalanmadan cevapla ! </center>
                 </div>
                 <div class="item item-divider item-dark">
                   <p>
@@ -39,7 +39,11 @@
                     BAŞLA!
                   </button>
               </center>
-              </div>
+            </div>
+            <div class="center" style="height: 40%;width: 40%;" ng-init="sw2()">
+                <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-colors="colours">
+                </canvas>
+            </div>
             </div>
           </div>
         </ion-content>

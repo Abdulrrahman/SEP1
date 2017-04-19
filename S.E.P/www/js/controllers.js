@@ -324,25 +324,14 @@ angular.module('SimpleRESTIonic.controllers', [])
         var fsclick = false;
         $scope.sws = sws;
         
-        $scope.sw2 = function (data) {
+        $scope.sw2 = function() {
             ItemsModel.fetch(1).then(function(result){
                 $scope.data[0]=result.data.A;
                 $scope.data[1]=result.data.B;
                 $scope.data[2]=result.data.C;
                 $scope.data[3]=result.data.D;
             });
-            $scope.modal2.show();
-            $timeout(function () {
-                $scope.closesw2();
-            }, 50000);
-        };
-        $ionicModal.fromTemplateUrl('templates/subtemplates/sub2.html', {
-            scope: $scope
-        }).then(function (modal) {
-            $scope.modal2 = modal;
-        });
+        }
 
-        $scope.closesw2 = function () {
-            $scope.modal2.hide();
-        };
+
     });
